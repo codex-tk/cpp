@@ -35,6 +35,7 @@
 #include <vector>
 #include <algorithm>
 #include <functional>
+#include <cassert>
 
 #if defined( _WIN32 )
 
@@ -76,6 +77,49 @@
 
 namespace codex{
   int universe(void);
+}
+
+#ifndef CODEX_ASSERT
+#define CODEX_ASSERT( expr , message ) assert( expr && message )
+#endif
+
+#ifndef DELETE_MOVE
+#define DELETE_MOVE( clazz ) clazz( clazz&& ) = delete; clazz& operator=( clazz&& ) = delete
+#endif
+
+#ifndef DELETE_COPY
+#define DELETE_COPY( clazz ) clazz( clazz& ) = delete; clazz& operator=( clazz& ) = delete
+#endif
+
+#ifndef DELETE_MOVE_AND_COPY
+#define DELETE_MOVE_AND_COPY( clazz ) DELETE_MOVE( clazz ); DELETE_COPY( clazz )
+#endif
+
+namespace {
+  class defaulted_and_deleted_function_order_sample {
+  public:
+    // 소멸자 명시 선언
+    // 이동 연산자는 delete 됨
+    ~defaulted_and_deleted_function_order_sample(void) = default;
+
+    // 이동 연산자 명시 선언
+    // 이동 연산자 명시 선언시 복사 연산자는 delete 
+    defaulted_and_deleted_function_order_sample(
+      defaulted_and_deleted_function_order_sample&& 
+    ) = default;
+    defaulted_and_deleted_function_order_sample& operator=(
+      defaulted_and_deleted_function_order_sample&& 
+    ) = default;
+
+    // 복사 연산자 명시 선언
+    defaulted_and_deleted_function_order_sample(
+      defaulted_and_deleted_function_order_sample&
+    ) = default;
+    defaulted_and_deleted_function_order_sample& operator=(
+      defaulted_and_deleted_function_order_sample& 
+    ) = default;
+    
+  };
 }
 
 #endif

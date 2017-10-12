@@ -39,9 +39,8 @@ TEST( chrono , basic ) {
     int64_t milliseconds = to_milliseconds(now);
     std::chrono::system_clock::time_point from = from_milliseconds(milliseconds);
 
-    PRINTF( "%d\r\n" , std::chrono::duration_cast< std::chrono::microseconds >(now - from).count() );
     ASSERT_EQ( milliseconds , std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count());
-
+    ASSERT_NE( now , from );
     ASSERT_EQ( std::chrono::time_point_cast< std::chrono::milliseconds >(now) , from);
 
 }
