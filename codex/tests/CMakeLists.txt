@@ -16,7 +16,6 @@ target_link_libraries( codex.tests codex gtest  )
 
 enable_testing()
 add_test(codex.tests codex.tests)
-
 add_custom_command(TARGET codex.tests
     POST_BUILD
     COMMAND ctest -C $<CONFIGURATION> --verbose

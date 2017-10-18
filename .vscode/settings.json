@@ -45,6 +45,9 @@
         "valarray": "cpp",
         "locale": "cpp",
         "sstream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "ios": "cpp",
+        "complex": "cpp",
+        "istream": "cpp"
     }
 }

@@ -44,3 +44,14 @@ TEST( chrono , basic ) {
     ASSERT_EQ( std::chrono::time_point_cast< std::chrono::milliseconds >(now) , from);
 
 }
+
+TEST( chrono , tm ) {
+    std::chrono::system_clock::time_point tp = std::chrono::system_clock::now();
+    time_t ts = std::chrono::system_clock::to_time_t(tp);
+    struct tm tm = *localtime(&ts);
+    PRINTF( "%d/%d/%d %02d:%02d:%02d\r\n" , tm.tm_year + 1900 , tm.tm_mon + 1 , tm.tm_mday 
+                    , tm.tm_hour , tm.tm_min , tm.tm_sec );
+    tm = *gmtime(&ts);
+    PRINTF( "%d/%d/%d %02d:%02d:%02d\r\n" , tm.tm_year + 1900 , tm.tm_mon + 1 , tm.tm_mday 
+                    , tm.tm_hour , tm.tm_min , tm.tm_sec );
+}

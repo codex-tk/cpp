@@ -81,6 +81,9 @@ static StringType replace( const StringType& message
     return out;
 }
 
+
+int atoi( const char* value );
+
 /*
 template < typename string_type >
 static string_type ltrim( const string_type& msg , const string_type& trimStr ) {

@@ -1,5 +1,6 @@
 #include <codex/util/string.hpp>
 #include <stdarg.h>
+#include <codex/codex.hpp>
 
 namespace codex {
 namespace string{
@@ -9,7 +10,6 @@ formatable::formatable( std::string& buf )
 {
 
 }
-
 
 formatable& formatable::append( const char* fmt , ... ) {
     if ( fmt == nullptr )
@@ -27,6 +27,33 @@ formatable& formatable::append( const char* fmt , ... ) {
 
 std::string& formatable::value( void ) {
     return _string;
+}
+
+int atoi( const char* value ) {
+    CODEX_ASSERT( value != nullptr 
+        , "atoi value == nullptr" );
+    if ( value == nullptr ) return 0;
+
+    while( *value && *value == ' ') 
+        ++value;
+
+    int ans = 0;
+    bool minus = false;
+    if ( *value == '-') {
+        minus = true;
+        ++value;
+    }
+    while ( *value ) {
+        if ( *value >= '0' && *value <= '9'){
+            ans *= 10;
+            ans += (*value - '0');
+            ++value;
+        }else{
+            break;
+        }
+    }
+    if ( minus ) ans *= -1;
+    return ans;
 }
 
 }}

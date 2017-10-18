@@ -1,5 +1,5 @@
-#ifndef __libcodex_codex_h__
-#define __libcodex_codex_h__
+#ifndef __codex_codex_h__
+#define __codex_codex_h__
 
 #if defined( _WIN32 )
 

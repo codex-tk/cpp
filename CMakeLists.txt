@@ -25,7 +25,7 @@ if(MSVC)
 			CMAKE_CXX_FLAGS_DEBUG
 			"${CMAKE_CXX_FLAGS_DEBUG}")
 else()
-	add_definitions( -Wall -std=c++1z -o2 -g -ggdb )
+	add_definitions( -Wall -std=c++1z -o2 -g -ggdb  )
 endif()
 
 add_subdirectory( googletest )

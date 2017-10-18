@@ -1,6 +1,6 @@
 project( codex )
 
-include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/include )
+
 #[[
 if ( MSVC )
 	#set(BOOST_ROOT "C:/Users/codex/works/boost_1_64_0")
@@ -54,6 +54,7 @@ set( SRCS
     ${PLATFORM_DEPEND_SRCS}
     )
 ]]
+include_directories( ${CMAKE_SOURCE_DIR}/codex/include )
 
 file(GLOB_RECURSE HEADERS RELATIVE "${CMAKE_SOURCE_DIR}/codex" "include/*.hpp" )
 file(GLOB_RECURSE SRCS RELATIVE "${CMAKE_SOURCE_DIR}/codex" "src/*.cpp" )
