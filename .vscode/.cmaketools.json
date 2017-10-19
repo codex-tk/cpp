@@ -34,6 +34,7 @@
                     "language": "CXX",
                     "sources": [
                       "src/codex.cpp",
+                      "src/component/container.cpp",
                       "src/error_code.cpp",
                       "src/util/math.cpp",
                       "src/util/properties.cpp",
@@ -45,6 +46,8 @@
                     "isGenerated": false,
                     "sources": [
                       "include/codex/codex.hpp",
+                      "include/codex/component/container.hpp",
+                      "include/codex/component/id.hpp",
                       "include/codex/error_code.hpp",
                       "include/codex/tmp/compile_time_error.hpp",
                       "include/codex/tmp/tmp.hpp",
@@ -89,6 +92,7 @@
                     "language": "CXX",
                     "sources": [
                       "chrono.cpp",
+                      "component.cpp",
                       "error_code.cpp",
                       "literals.cpp",
                       "main.cpp",
@@ -177,51 +181,6 @@
               },
               {
                 "artifacts": [
-                  "/Users/ghtak/Projects/personal/cpp/build/codex/libcodexd.a"
-                ],
-                "buildDirectory": "/Users/ghtak/Projects/personal/cpp/build/codex",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb",
-                    "includePath": [
-                      {
-                        "path": "/Users/ghtak/Projects/personal/cpp/codex/include"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/codex.cpp",
-                      "src/error_code.cpp",
-                      "src/util/math.cpp",
-                      "src/util/properties.cpp",
-                      "src/util/string.cpp",
-                      "src/util/time.cpp"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "include/codex/codex.hpp",
-                      "include/codex/error_code.hpp",
-                      "include/codex/tmp/compile_time_error.hpp",
-                      "include/codex/tmp/tmp.hpp",
-                      "include/codex/util/math.hpp",
-                      "include/codex/util/properties.hpp",
-                      "include/codex/util/singleton.hpp",
-                      "include/codex/util/string.hpp",
-                      "include/codex/util/time.hpp"
-                    ]
-                  }
-                ],
-                "fullName": "libcodexd.a",
-                "linkerLanguage": "CXX",
-                "name": "codex",
-                "sourceDirectory": "/Users/ghtak/Projects/personal/cpp/codex",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
                   "/Users/ghtak/Projects/personal/cpp/build/googletest/googlemock/libgmockd.a"
                 ],
                 "buildDirectory": "/Users/ghtak/Projects/personal/cpp/build/googletest/googlemock",
@@ -295,6 +254,54 @@
               },
               {
                 "artifacts": [
+                  "/Users/ghtak/Projects/personal/cpp/build/codex/libcodexd.a"
+                ],
+                "buildDirectory": "/Users/ghtak/Projects/personal/cpp/build/codex",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb",
+                    "includePath": [
+                      {
+                        "path": "/Users/ghtak/Projects/personal/cpp/codex/include"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/codex.cpp",
+                      "src/component/container.cpp",
+                      "src/error_code.cpp",
+                      "src/util/math.cpp",
+                      "src/util/properties.cpp",
+                      "src/util/string.cpp",
+                      "src/util/time.cpp"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "include/codex/codex.hpp",
+                      "include/codex/component/container.hpp",
+                      "include/codex/component/id.hpp",
+                      "include/codex/error_code.hpp",
+                      "include/codex/tmp/compile_time_error.hpp",
+                      "include/codex/tmp/tmp.hpp",
+                      "include/codex/util/math.hpp",
+                      "include/codex/util/properties.hpp",
+                      "include/codex/util/singleton.hpp",
+                      "include/codex/util/string.hpp",
+                      "include/codex/util/time.hpp"
+                    ]
+                  }
+                ],
+                "fullName": "libcodexd.a",
+                "linkerLanguage": "CXX",
+                "name": "codex",
+                "sourceDirectory": "/Users/ghtak/Projects/personal/cpp/codex",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
                   "/Users/ghtak/Projects/personal/cpp/build/codex/tests/codex.tests"
                 ],
                 "buildDirectory": "/Users/ghtak/Projects/personal/cpp/build/codex/tests",
@@ -313,6 +320,7 @@
                     "language": "CXX",
                     "sources": [
                       "chrono.cpp",
+                      "component.cpp",
                       "error_code.cpp",
                       "literals.cpp",
                       "main.cpp",
@@ -680,7 +688,7 @@
         ]
       }
     ],
-    "cookie": "0.9665883093917331",
+    "cookie": "0.4551612386349946",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

@@ -5,6 +5,9 @@
 
 namespace codex { namespace tmp {
 
+struct null_type{};
+struct empty_type{};
+
 }}
 
 #endif

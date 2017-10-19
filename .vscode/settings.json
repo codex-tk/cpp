@@ -48,6 +48,7 @@
         "iosfwd": "cpp",
         "ios": "cpp",
         "complex": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "unordered_map": "cpp"
     }
 }
