@@ -18,7 +18,7 @@ namespace detail {
                 return _service.service( _data , std::forward<Callback>(cb));
             } else {
                 _data.insert(_data.end(), ptr, ptr+size);
-                if ( _data.size() > ZLIB_CHUNK_SIZE || force ) {
+                if ( _data.size() >= ZLIB_CHUNK_SIZE || force ) {
                     return _service.service( _data , cb );
                 }
             }

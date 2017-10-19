@@ -72,8 +72,13 @@ public:
     template < typename ComponentT >
     void insert( const std::shared_ptr<ComponentT>& component ) {
         typedef typename detail::representation_component<ComponentT>::type component_type;
-        _map[ component_type::component_id() ] = 
+        _type_map[ component_type::component_id() ] = 
             std::static_pointer_cast<void>(component);
+        if ( detail::is_interface<component_type>::value && 
+             !std::is_same< component_type , ComponentT >::value )
+        {
+            _raw_type_map[ComponentT::component_id()] = std::static_pointer_cast<void>(component);
+        }
     }
 
     template < typename ComponentT > 
@@ -84,16 +89,20 @@ public:
         if ( detail::is_interface<component_type>::value 
             && !std::is_same< interface_type , info_type  >::value )
         {
+            if ( _raw_type_map.find( ComponentT::component_id()) != _raw_type_map.end() ) {
+                return std::static_pointer_cast<ComponentT>(_raw_type_map[ ComponentT::component_id() ]);
+            }
             return std::shared_ptr<ComponentT>();
         }
         intptr_t cid = representation_component_type::component_id();
-        if ( _map.find( cid ) != _map.end() ) {
-            return std::static_pointer_cast<ComponentT>(_map[ cid ]);
+        if ( _type_map.find( cid ) != _type_map.end() ) {
+            return std::static_pointer_cast<ComponentT>(_type_map[ cid ]);
         }
         return std::shared_ptr<ComponentT>();
     }
 private:
-    std::unordered_map< intptr_t , std::shared_ptr<void> > _map;
+    std::unordered_map< intptr_t , std::shared_ptr<void> > _type_map;
+    std::unordered_map< intptr_t , std::shared_ptr<void> > _raw_type_map;
 };
 
 }}

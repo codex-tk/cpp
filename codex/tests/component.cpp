@@ -145,10 +145,12 @@ TEST( compnent , interface_base ){
     codex::component::container container;
     container.insert(scptr);
     ASSERT_EQ( (*container.get<service>())() , "sample_service" );
-    ASSERT_FALSE(container.get<sample_service>());
+    ASSERT_TRUE(container.get<sample_service>());
+    ASSERT_FALSE(container.get<real_service>());
     container.insert(rcptr);
     ASSERT_EQ( (*container.get<service>())() , "real_service" );
-    ASSERT_FALSE(container.get<real_service>());
+    ASSERT_TRUE(container.get<real_service>());
+    ASSERT_TRUE(container.get<sample_service>());
 }
 
 namespace {
