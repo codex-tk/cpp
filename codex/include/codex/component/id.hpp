@@ -18,16 +18,16 @@ struct interface_type{};
 struct normal_type{};
 
 #define DECL_INTERFACE_COMPONENT( compnent , parent )\
-    typedef codex::component::id< compnent , parent  , codex::component::interface_type > ideitiifer_type;\
-    static ideitiifer_type _component_id;\
+    typedef codex::component::id< compnent , parent  , codex::component::interface_type > identifier_type;\
+    static identifier_type _component_id;\
     static intptr_t component_id( void ) { return reinterpret_cast<intptr_t>(&_component_id);}
 
 #define IMPL_INTERFACE_COMPONENT( compnent , parent )\
     codex::component::id< compnent , parent , codex::component::interface_type > compnent::_component_id;
 
 #define DECL_NORMAL_COMPONENT( compnent , parent )\
-    typedef codex::component::id< compnent , parent  , codex::component::normal_type > ideitiifer_type;\
-    static ideitiifer_type _component_id;\
+    typedef codex::component::id< compnent , parent  , codex::component::normal_type > identifier_type;\
+    static identifier_type _component_id;\
     static intptr_t component_id( void ) { return reinterpret_cast<intptr_t>(&_component_id);}
 
 #define IMPL_NORMAL_COMPONENT( compnent , parent )\

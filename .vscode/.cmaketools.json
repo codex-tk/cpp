@@ -47,6 +47,7 @@
                     "sources": [
                       "include/codex/codex.hpp",
                       "include/codex/component/container.hpp",
+                      "include/codex/component/detail.hpp",
                       "include/codex/component/id.hpp",
                       "include/codex/error_code.hpp",
                       "include/codex/tmp/compile_time_error.hpp",
@@ -282,6 +283,7 @@
                     "sources": [
                       "include/codex/codex.hpp",
                       "include/codex/component/container.hpp",
+                      "include/codex/component/detail.hpp",
                       "include/codex/component/id.hpp",
                       "include/codex/error_code.hpp",
                       "include/codex/tmp/compile_time_error.hpp",
@@ -688,7 +690,7 @@
         ]
       }
     ],
-    "cookie": "0.9934491155423284",
+    "cookie": "0.33840502421767615",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

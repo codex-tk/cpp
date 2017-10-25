@@ -113,7 +113,7 @@ public:
 };
 IMPL_INTERFACE_COMPONENT( service , codex::tmp::null_type )
 
-class sample_service{
+class sample_service : public service{
 public:
     virtual ~sample_service(void){}
 
@@ -126,7 +126,7 @@ public:
 IMPL_NORMAL_COMPONENT( sample_service , service )  
 
 
-class real_service{
+class real_service: public service{
 public:
     virtual ~real_service(void){}
 
@@ -183,6 +183,8 @@ TEST( compnent , normal_base ){
     ASSERT_FALSE(container.get<svc>());
     ASSERT_TRUE( container.get<svc0>());
     ASSERT_TRUE( container.get<svc1>());
-    ASSERT_NE( reinterpret_cast<intptr_t>(container.get<svc0>().get())
-     ,  reinterpret_cast<intptr_t>(container.get<svc1>().get()));
+    ASSERT_NE( 
+        reinterpret_cast<intptr_t>(container.get<svc0>().get())
+     ,  reinterpret_cast<intptr_t>(container.get<svc1>().get())
+    );
 }
