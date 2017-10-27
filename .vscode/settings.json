@@ -61,6 +61,7 @@
         "cstring": "cpp",
         "ctime": "cpp",
         "cwchar": "cpp",
-        "cwctype": "cpp"
+        "cwctype": "cpp",
+        "__functional_03": "cpp"
     }
 }

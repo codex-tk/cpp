@@ -1,6 +1,7 @@
 project( codex.tests )
 
 include_directories( ${CMAKE_SOURCE_DIR}/codex/include )
+include_directories( ${CMAKE_SOURCE_DIR}/json/src )
 
 file(GLOB SRCS ./*.cpp)
 
