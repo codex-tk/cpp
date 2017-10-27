@@ -49,6 +49,18 @@
         "ios": "cpp",
         "complex": "cpp",
         "istream": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "atomic": "cpp",
+        "cctype": "cpp",
+        "cmath": "cpp",
+        "csignal": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp"
     }
 }

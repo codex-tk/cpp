@@ -12,6 +12,15 @@ if ( ZLIB_FOUND )
     target_link_libraries( codex.tests ${ZLIB_LIBRARIES} )
 endif( ZLIB_FOUND )
 
+set(Boost_USE_STATIC_LIBS        ON) # only find static libs
+set(Boost_USE_MULTITHREADED      ON)
+set(Boost_USE_STATIC_RUNTIME    OFF)
+find_package(Boost 1.60.0 COMPONENTS filesystem )
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS})
+    target_link_libraries( codex.tests ${Boost_LIBRARIES})
+endif()
+
 target_link_libraries( codex.tests codex gtest  )
 
 enable_testing()
