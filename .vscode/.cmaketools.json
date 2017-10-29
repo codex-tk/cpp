@@ -100,6 +100,21 @@
             "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
             "targets": [
               {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/codex/tests/Debug/codex.tests.exe",
                   "C:/Users/codex/cpp/build/codex/tests/Debug/codex.tests.lib",
@@ -160,21 +175,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
-                "type": "UTILITY"
               }
             ]
           },
@@ -183,103 +183,6 @@
             "name": "cpp",
             "sourceDirectory": "C:/Users/codex/cpp",
             "targets": [
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmockd.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_maind.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
               {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
@@ -318,6 +221,47 @@
                 "linkFlags": "/machine:X86",
                 "linkerLanguage": "CXX",
                 "name": "gtest",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gtest_maind.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
               },
@@ -382,6 +326,208 @@
                 "type": "STATIC_LIBRARY"
               },
               {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/24b6dea5510b204e1e54de507a4a9632/generate.stamp.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ZERO_CHECK",
+                "name": "ZERO_CHECK",
+                "sourceDirectory": "C:/Users/codex/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmockd.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_maind.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/codex/tests/Debug/codex.tests.exe",
                   "C:/Users/codex/cpp/build/codex/tests/Debug/codex.tests.lib",
@@ -442,152 +588,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gtest_maind.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/24b6dea5510b204e1e54de507a4a9632/generate.stamp.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ZERO_CHECK",
-                "name": "ZERO_CHECK",
-                "sourceDirectory": "C:/Users/codex/cpp",
-                "type": "UTILITY"
               }
             ]
           },
@@ -598,103 +598,6 @@
             "targets": [
               {
                 "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmockd.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_maind.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtestd.pdb"
@@ -804,6 +707,103 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
                 "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmockd.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_maind.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
               }
             ]
           },
@@ -814,103 +814,6 @@
             "targets": [
               {
                 "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmockd.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_maind.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Debug/gtestd.pdb"
@@ -1004,21 +907,6 @@
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
                 "type": "UTILITY"
               },
               {
@@ -1035,6 +923,118 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest",
                 "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmockd.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmockd.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Debug/gmock_maind.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_maind.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
               }
             ]
           },
@@ -1235,6 +1235,21 @@
             "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
             "targets": [
               {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/codex/tests/Release/codex.tests.exe",
                   "C:/Users/codex/cpp/build/codex/tests/Release/codex.tests.lib",
@@ -1295,21 +1310,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
-                "type": "UTILITY"
               }
             ]
           },
@@ -1318,103 +1318,6 @@
             "name": "cpp",
             "sourceDirectory": "C:/Users/codex/cpp",
             "targets": [
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  },
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "gmock.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  },
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
               {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
@@ -1453,6 +1356,47 @@
                 "linkFlags": "/machine:X86",
                 "linkerLanguage": "CXX",
                 "name": "gtest",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gtest_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
               },
@@ -1517,6 +1461,208 @@
                 "type": "STATIC_LIBRARY"
               },
               {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/24b6dea5510b204e1e54de507a4a9632/generate.stamp.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ZERO_CHECK",
+                "name": "ZERO_CHECK",
+                "sourceDirectory": "C:/Users/codex/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  },
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "gmock.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  },
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/codex/tests/Release/codex.tests.exe",
                   "C:/Users/codex/cpp/build/codex/tests/Release/codex.tests.lib",
@@ -1577,152 +1723,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gtest_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/24b6dea5510b204e1e54de507a4a9632/generate.stamp.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ZERO_CHECK",
-                "name": "ZERO_CHECK",
-                "sourceDirectory": "C:/Users/codex/cpp",
-                "type": "UTILITY"
               }
             ]
           },
@@ -1733,103 +1733,6 @@
             "targets": [
               {
                 "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  },
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "gmock.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  },
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest.pdb"
@@ -1939,6 +1842,103 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
                 "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  },
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "gmock.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  },
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
               }
             ]
           },
@@ -1949,103 +1949,6 @@
             "targets": [
               {
                 "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  },
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "gmock.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  },
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/Release/gtest.pdb"
@@ -2139,21 +2042,6 @@
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
                 "type": "UTILITY"
               },
               {
@@ -2170,6 +2058,118 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest",
                 "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  },
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "gmock.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/Release/gmock_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  },
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
               }
             ]
           },
@@ -2370,6 +2370,21 @@
             "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
             "targets": [
               {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/codex/tests/MinSizeRel/codex.tests.exe",
                   "C:/Users/codex/cpp/build/codex/tests/MinSizeRel/codex.tests.lib",
@@ -2430,21 +2445,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
-                "type": "UTILITY"
               }
             ]
           },
@@ -2453,103 +2453,6 @@
             "name": "cpp",
             "sourceDirectory": "C:/Users/codex/cpp",
             "targets": [
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
               {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
@@ -2588,6 +2491,47 @@
                 "linkFlags": "/machine:X86",
                 "linkerLanguage": "CXX",
                 "name": "gtest",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  },
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "gtest_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
               },
@@ -2652,6 +2596,208 @@
                 "type": "STATIC_LIBRARY"
               },
               {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/24b6dea5510b204e1e54de507a4a9632/generate.stamp.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ZERO_CHECK",
+                "name": "ZERO_CHECK",
+                "sourceDirectory": "C:/Users/codex/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/codex/tests/MinSizeRel/codex.tests.exe",
                   "C:/Users/codex/cpp/build/codex/tests/MinSizeRel/codex.tests.lib",
@@ -2712,152 +2858,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  },
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "gtest_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/24b6dea5510b204e1e54de507a4a9632/generate.stamp.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ZERO_CHECK",
-                "name": "ZERO_CHECK",
-                "sourceDirectory": "C:/Users/codex/cpp",
-                "type": "UTILITY"
               }
             ]
           },
@@ -2868,103 +2868,6 @@
             "targets": [
               {
                 "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.pdb"
@@ -3074,6 +2977,103 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
                 "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
               }
             ]
           },
@@ -3084,103 +3084,6 @@
             "targets": [
               {
                 "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.pdb"
@@ -3274,21 +3177,6 @@
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
                 "type": "UTILITY"
               },
               {
@@ -3305,6 +3193,118 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest",
                 "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/MinSizeRel/gmock_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
               }
             ]
           },
@@ -3505,6 +3505,21 @@
             "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
             "targets": [
               {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/codex/tests/RelWithDebInfo/codex.tests.exe",
                   "C:/Users/codex/cpp/build/codex/tests/RelWithDebInfo/codex.tests.lib",
@@ -3565,21 +3580,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
-                "type": "UTILITY"
               }
             ]
           },
@@ -3588,103 +3588,6 @@
             "name": "cpp",
             "sourceDirectory": "C:/Users/codex/cpp",
             "targets": [
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
               {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
@@ -3723,6 +3626,47 @@
                 "linkFlags": "/machine:X86",
                 "linkerLanguage": "CXX",
                 "name": "gtest",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gtest_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
               },
@@ -3787,6 +3731,208 @@
                 "type": "STATIC_LIBRARY"
               },
               {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/codex",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/codex",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/24b6dea5510b204e1e54de507a4a9632/generate.stamp.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ZERO_CHECK",
+                "name": "ZERO_CHECK",
+                "sourceDirectory": "C:/Users/codex/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
                 "artifacts": [
                   "C:/Users/codex/cpp/build/codex/tests/RelWithDebInfo/codex.tests.exe",
                   "C:/Users/codex/cpp/build/codex/tests/RelWithDebInfo/codex.tests.lib",
@@ -3847,152 +3993,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gtest_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex/tests",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/codex",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/codex",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/24b6dea5510b204e1e54de507a4a9632/generate.stamp.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ZERO_CHECK",
-                "name": "ZERO_CHECK",
-                "sourceDirectory": "C:/Users/codex/cpp",
-                "type": "UTILITY"
               }
             ]
           },
@@ -4003,103 +4003,6 @@
             "targets": [
               {
                 "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.pdb"
@@ -4209,6 +4112,103 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
                 "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
               }
             ]
           },
@@ -4219,103 +4219,6 @@
             "targets": [
               {
                 "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
-                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/codex/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gmock_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
                   "C:/Users/codex/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.pdb"
@@ -4409,21 +4312,6 @@
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
                 "type": "UTILITY"
               },
               {
@@ -4440,6 +4328,118 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/codex/cpp/googletest",
                 "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.lib",
+                  "C:/Users/codex/cpp/build/googletest/googlemock/RelWithDebInfo/gmock_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/codex/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/codex/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gmock_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "C:/Users/codex/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
               }
             ]
           },
@@ -4550,7 +4550,7 @@
         ]
       }
     ],
-    "cookie": "0.05427368547598577",
+    "cookie": "0.24070016857525234",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

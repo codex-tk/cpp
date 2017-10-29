@@ -1,0 +1,1 @@
+cmake --build c:/Users/codex/cpp/build --target ALL_BUILD --config Debug -- /m /property:GenerateFullPaths=true
