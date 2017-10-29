@@ -8,7 +8,7 @@
 #endif
 
 #include <WinSock2.h>
-#include <MSWSock.h>z
+#include <MSWSock.h>
 #include <ws2tcpip.h>
 #include <Windows.h>
 

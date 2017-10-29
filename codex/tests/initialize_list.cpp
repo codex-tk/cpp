@@ -2,6 +2,11 @@
 #include <json.hpp>
 #if defined(ENABLE_LIB_BOOST)
 #include <boost/any.hpp>
+namespace ns = boost;
+#else
+#include <any>
+namespace ns = std;
+#endif
 #include "helper.hpp"
 
 namespace {
@@ -19,21 +24,25 @@ public:
     }
     any_value( std::initializer_list<any_value>&& l ) {
         _type = type::list;
-        _value = std::forward<std::initializer_list<any_value>>(l);
+        std::vector< any_value > values;
+        for (const any_value& av : l) {
+          values.emplace_back(av);
+        }
+        _value = values;
     }
 
     void print() const {
         switch( _type ){
             case type::integer:
-                PRINTF( "%d\n" , boost::any_cast<int>(_value));
+                PRINTF( "%d\n" , ns::any_cast<int>(_value));
                 break;
             case type::string:
-                PRINTF( "%s\n" , boost::any_cast<std::string>(_value).c_str());
+                PRINTF( "%s\n" , ns::any_cast<std::string>(_value).c_str());
                 break;
             case type::list:
-                PRINTF( "List Begin\n" );
-                {
-                    std::initializer_list<any_value> l = boost::any_cast<std::initializer_list<any_value>>(_value);
+                PRINTF( "List Begin %s\n" , _value.type().name() );
+                {  
+                    std::vector< any_value > l = ns::any_cast<std::vector< any_value >>(_value);
                     for ( const any_value& nr : l ) {
                         nr.print();
                     }
@@ -49,7 +58,12 @@ private:
         list ,
     };
     type _type;
+
+#if defined(ENABLE_LIB_BOOST)
     boost::any _value;
+#else
+    std::any _value;
+#endif
 };
 
 void initialize_list_retrieve( std::initializer_list<any_value>&& l  ) {
@@ -63,4 +77,3 @@ void initialize_list_retrieve( std::initializer_list<any_value>&& l  ) {
 TEST( multiple_types_initialize_list , usage ){
     initialize_list_retrieve( { 0 , "str" , { 3 , "1" }} );
 }
-#endif
