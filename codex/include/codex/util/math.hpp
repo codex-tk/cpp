@@ -1,11 +1,9 @@
 #ifndef __codex_util_math_h__
 #define __codex_util_math_h__
 
-#include <cmath>
-
 namespace codex { namespace math {
 
-
+    constexpr double pi = 3.14159265358979323846;
     /*
     180 degree = pi radian
     1 degree = pi / 180 radian

@@ -7,10 +7,11 @@ file(GLOB SRCS ./*.cpp)
 
 add_executable( codex.tests ${SRCS} )
 
-find_package( ZLIB REQUIRED )
+find_package( ZLIB )
 if ( ZLIB_FOUND )
     include_directories( ${ZLIB_INCLUDE_DIRS} )
     target_link_libraries( codex.tests ${ZLIB_LIBRARIES} )
+    add_definitions( -DENABLE_LIB_Z )
 endif( ZLIB_FOUND )
 
 set(Boost_USE_STATIC_LIBS        ON) # only find static libs
@@ -20,6 +21,7 @@ find_package(Boost 1.60.0 COMPONENTS filesystem )
 if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})
     target_link_libraries( codex.tests ${Boost_LIBRARIES})
+    add_definitions( -DENABLE_LIB_BOOST )
 endif()
 
 target_link_libraries( codex.tests codex gtest  )

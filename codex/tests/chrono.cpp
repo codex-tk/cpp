@@ -22,7 +22,7 @@ TEST( chrono , basic ) {
 
     // std::chrono::system_clock::time_point =
     // std::chrono::time_point< std::chrono::system_clock , std::chrono::microseconds >
-    std::chrono::microseconds diff_mic_secs = next_day - now;
+    std::chrono::microseconds diff_mic_secs = std::chrono::duration_cast<std::chrono::milliseconds>(next_day - now);
     std::chrono::hours diff_hours = std::chrono::duration_cast<std::chrono::hours>(diff_mic_secs);
 
     // change Duration

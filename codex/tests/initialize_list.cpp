@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <json.hpp>
+#if defined(ENABLE_LIB_BOOST)
 #include <boost/any.hpp>
 #include "helper.hpp"
 
@@ -62,3 +63,4 @@ void initialize_list_retrieve( std::initializer_list<any_value>&& l  ) {
 TEST( multiple_types_initialize_list , usage ){
     initialize_list_retrieve( { 0 , "str" , { 3 , "1" }} );
 }
+#endif

@@ -1,4 +1,6 @@
 #include <gtest/gtest.h>
+
+#if defined( ENABLE_LIB_Z )
 #include <zlib.h>
 #include <vector>
 
@@ -230,7 +232,7 @@ bool raw_decompress( void* gptr , int gsize , void* pptr , int& psize ) {
     return true;
 }
 }
-
+#endif
 /*
 
 // original string len = 36

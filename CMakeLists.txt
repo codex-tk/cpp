@@ -24,6 +24,8 @@ if(MSVC)
 	string(REGEX REPLACE "/O2" "Od"
 			CMAKE_CXX_FLAGS_DEBUG
 			"${CMAKE_CXX_FLAGS_DEBUG}")
+	add_definitions( /std:c++latest )
+	add_definitions( -DGTEST_LANG_CXX11=1 )
 else()
 	add_definitions( -Wall -std=c++1z -o2 -g -ggdb  )
 endif()

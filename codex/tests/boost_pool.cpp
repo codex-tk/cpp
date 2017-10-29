@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#if defined( ENABLE_LIB_BOOST )
 #include <boost/pool/pool.hpp>
 
 TEST( boost ,  pool ) {
@@ -9,3 +10,5 @@ TEST( boost ,  pool ) {
         (*t) = 32;
     }
 }
+
+#endif

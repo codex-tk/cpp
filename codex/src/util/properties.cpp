@@ -1,6 +1,7 @@
 #include <codex/util/properties.hpp>
 #include <codex/util/string.hpp>
 #include <vector>
+#include <string>
 
 namespace codex {
 
