@@ -1,5 +1,4 @@
 #include <gtest/gtest.h>
-#include <json.hpp>
 #if defined(ENABLE_LIB_BOOST)
 #include <boost/any.hpp>
 namespace ns = boost;
@@ -58,12 +57,7 @@ private:
         list ,
     };
     type _type;
-
-#if defined(ENABLE_LIB_BOOST)
-    boost::any _value;
-#else
-    std::any _value;
-#endif
+    ns::any _value;
 };
 
 void initialize_list_retrieve( std::initializer_list<any_value>&& l  ) {

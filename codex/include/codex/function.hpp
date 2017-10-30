@@ -3,21 +3,8 @@
 
 #include <memory>
 #include <codex/callable.hpp>
-#include <codex/util/method_calls.hpp>
-#include <codex/util/singleton.hpp>
 
 namespace codex {
-
-constexpr int function_ctor = 0;
-constexpr int function_copy_ctor = 1;
-constexpr int function_copy_ctor_l = 2;
-constexpr int function_move_ctor = 3;
-constexpr int function_callable_ctor = 4;
-
-constexpr int function_assign = 5;
-constexpr int function_assign_l = 6;
-constexpr int function_move_assign = 7;
-constexpr int function_callable_assign = 8;
 
 template < typename Signature >
 class function;
@@ -29,25 +16,36 @@ public:
     function( void );
     /*! copy construct */
     function( const function& rhs );
-    /*! copy construct */
+    /*! 
+        function< R (Args...) > lhs( ... );
+        if ( not exist  function( function& rhs ) ) 
+            // match -> template < typename HandlerT > function( HandlerT&& handler );
+            function< R (Args...) > rhs(lhs); 
+    */
     function( function& rhs );
     /*! move construct */
     function( function&& rhs );
 
-    /*! callable construct */
+    /*! ctor from callable */
     template < typename HandlerT >
     function( HandlerT&& handler );
     
-    /*! */
+    /*! typically assign operation */
     function& operator=( const function& rhs );
 
-    /*! */
+    /*! 
+        function< R (Args...) > lhs( ... );
+        function< R (Args...) > rhs( ... );
+        if ( not exist  operator=( function& rhs ) ) 
+            // match -> template < typename HandlerT > function& operator=( HandlerT&& handler );
+            lhs = rhs; 
+    */
     function& operator=( function& rhs );
 
-    /*! */
+    /*! move assign */
     function& operator=( function&& rhs );
 
-    /*! */
+    /*! assign from callable */
     template < typename HandlerT >
     function& operator=( HandlerT&& handler );
     

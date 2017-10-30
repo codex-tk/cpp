@@ -1,82 +1,107 @@
 #include <gtest/gtest.h>
 #include <codex/function.hpp>
 
-TEST( function  , usage ) {
+class function_test_fixture : public testing::Test {
+public:
+    void SetUp() override {
+        method_calls = &codex::singleton< codex::method_calls<codex::function < void () >>>::instance();
+        method_calls->reset();
+        call_ids = {
+            codex::function_ctor , 
+            codex::function_copy_ctor ,
+            codex::function_copy_ctor_l ,
+            codex::function_move_ctor ,
+            codex::function_callable_ctor ,
+            codex::function_assign ,
+            codex::function_assign_l ,
+            codex::function_move_assign ,
+            codex::function_callable_assign ,
+        };
+    }
+
+    void TearDown() override {
+
+    }
+protected:
+    codex::method_calls<codex::function < void () >>* method_calls;
+    std::vector< int > call_ids;
+};
+
+typedef codex::function< void () > test_fn;
+
+TEST_F( function_test_fixture , ctor ) {
+    for ( auto id : call_ids ) {
+        ASSERT_EQ( method_calls->call_counts(id) , 0 );
+    }
+    test_fn _function_ctor;
+    ASSERT_EQ( method_calls->call_counts(codex::function_ctor) , 1 );
+
+    const test_fn _function_copy_ctor_l(_function_ctor);
+    ASSERT_EQ( method_calls->call_counts(codex::function_copy_ctor_l) , 1 );
+
+    test_fn _function_copy_ctor( _function_copy_ctor_l );
+    ASSERT_EQ( method_calls->call_counts(codex::function_copy_ctor) , 1 );
+
+    test_fn _function_move_ctor( std::move(_function_copy_ctor));
+    ASSERT_EQ( method_calls->call_counts(codex::function_move_ctor) , 1 );
+
+    test_fn _function_callable_ctor([]{});
+    ASSERT_EQ( method_calls->call_counts(codex::function_callable_ctor) , 1 );
+}
+
+TEST_F( function_test_fixture , assign ) {
+    for ( auto id : call_ids ) {
+        ASSERT_EQ( method_calls->call_counts(id) , 0 );
+    }
+    test_fn _function_ctor_rhs;
+    const test_fn _function_ctor_const_rhs;
+    ASSERT_EQ( method_calls->call_counts(codex::function_ctor) , 2 );
+
+    test_fn _function_assign;
+    ASSERT_EQ( method_calls->call_counts(codex::function_ctor) , 3 );
+
+    _function_assign = _function_ctor_const_rhs;
+    ASSERT_EQ( method_calls->call_counts(codex::function_assign) , 1 );
     
-    codex::method_calls<codex::function < void () >>& mc 
-    = codex::singleton< codex::method_calls<codex::function < void () >>>::instance();
-    
-    ASSERT_EQ( mc.call_counts( codex::function_callable_ctor ) , 0 );
+    _function_assign = _function_ctor_rhs;
+    ASSERT_EQ( method_calls->call_counts(codex::function_assign_l) , 1 );
 
-    codex::function < void () > function([]{});
+    _function_assign = std::move(_function_ctor_rhs);
+    ASSERT_EQ( method_calls->call_counts(codex::function_move_assign) , 1 );
 
-    ASSERT_EQ( mc.call_counts( codex::function_callable_ctor ) , 1 );
+    _function_assign = [] {};
+    ASSERT_EQ( method_calls->call_counts(codex::function_callable_assign) , 1 );
+}
 
-    function();
-    int test_value = 0;
-    function = [&test_value] {
-        test_value += 2;
-    };
-
-    ASSERT_EQ( mc.call_counts( codex::function_callable_assign ) , 1 );
-    /*
-    할당 연산자가 없으면 다음과 같이 동작
-    codex::function<void ()> unnamed( [&test_value] {
-        test_value += 2;
+TEST( function  , owner_ship ) {
+    int seed = 0;
+    codex::function< int (void) > origin( [&seed] () -> int {
+        ++seed;
+        return seed;
     });
-    function = unamed;
-    */
-    function();
-    ASSERT_EQ( test_value , 2 );
-    function();
-    ASSERT_EQ( test_value , 4 );
-    /*
-    function( function& ) 와 match
-    해당 구현이 없을시
-    template < typename HandlerT >
-    function( HandlerT&& handler ) 로 match
-    */
-    const codex::function< void () > from_ctor_ref( function );
 
-    ASSERT_EQ( mc.call_counts( codex::function_copy_ctor_l ) , 1 );
-    from_ctor_ref();
-    ASSERT_EQ( test_value , 6);
+    origin();
+    ASSERT_EQ( seed , 1 );
 
-    codex::function< void () > from_ctor_cref( from_ctor_ref );
-    
-    ASSERT_EQ( mc.call_counts( codex::function_copy_ctor ) , 1 );
+    codex::function< int (void) > copy( origin );
+    copy();
+    ASSERT_EQ( seed , 2 );
 
-    from_ctor_cref();
-    ASSERT_EQ( test_value , 8);
+    codex::function< int (void) > move( std::move( copy));
+    copy();
+    ASSERT_EQ( seed , 2 );
+    move();
+    ASSERT_EQ( seed , 3 );
 
-
-    codex::function< void () > assign;
-    assign = from_ctor_ref;
-
-    ASSERT_EQ( mc.call_counts( codex::function_assign ) , 1 );
-
+    codex::function< int (void) > assign;
+    assign = origin;
     assign();
-    ASSERT_EQ( test_value , 10);
+    ASSERT_EQ( seed , 4 );
 
-    assign = from_ctor_cref;
-    
-    ASSERT_EQ( mc.call_counts( codex::function_assign_l ) , 1 );
-
+    assign = std::move( origin );
     assign();
-    ASSERT_EQ( test_value , 12);
+    ASSERT_EQ( seed , 5 );
 
-    assign = std::move( from_ctor_cref );
-
-    ASSERT_EQ( mc.call_counts( codex::function_move_assign ) , 1 );
-
-    assign();
-    ASSERT_EQ( test_value , 14);
-
-    from_ctor_cref();
-    EXPECT_EQ( test_value , 14);
-
-    assign.swap(from_ctor_cref);
-    
-    from_ctor_cref();
-    EXPECT_EQ( test_value , 16);
+    origin();
+    ASSERT_EQ( seed , 5 );
 }

@@ -1,3 +1,25 @@
+#define CODEX_FUNCTION_TEST
+
+#include <codex/util/method_calls.hpp>
+#include <codex/util/singleton.hpp>
+
+#if defined( CODEX_FUNCTION_TEST )
+namespace codex {
+constexpr int function_ctor = 0;
+constexpr int function_copy_ctor = 1;
+constexpr int function_copy_ctor_l = 2;
+constexpr int function_move_ctor = 3;
+constexpr int function_callable_ctor = 4;
+
+constexpr int function_assign = 5;
+constexpr int function_assign_l = 6;
+constexpr int function_move_assign = 7;
+constexpr int function_callable_assign = 8;
+}
+#define CALL_RECORD( arg ) codex::singleton< method_calls< function > >::instance().call( arg );
+#else
+#define CALL_RECORD( arg )
+#endif
 namespace codex {
 namespace {
     template < typename HandlerT , typename R , typename ... Args >
@@ -22,28 +44,28 @@ namespace {
 template < typename R , typename ... Args >
 function < R ( Args... ) >::function( void )
 {
-    codex::singleton< method_calls< function > >::instance().call( function_ctor );
+    CALL_RECORD( function_ctor );
 }
 
 template < typename R , typename ... Args >
 function < R ( Args... ) >::function( const function& rhs )
     : _callable( rhs._callable )
 {
-    codex::singleton< method_calls< function > >::instance().call( function_copy_ctor );
+    CALL_RECORD( function_copy_ctor );
 }
 
 template < typename R , typename ... Args >
 function < R ( Args... ) >::function( function& rhs )
     : _callable( rhs._callable )
 {
-    codex::singleton< method_calls< function > >::instance().call( function_copy_ctor_l );
+    CALL_RECORD( function_copy_ctor_l );
 }
 
 template < typename R , typename ... Args >
 function < R ( Args... ) >::function( function&& rhs )
     : _callable( std::move(rhs._callable) )
 {
-    codex::singleton< method_calls< function > >::instance().call( function_move_ctor );
+    CALL_RECORD( function_move_ctor );
 }
 
 
@@ -53,26 +75,26 @@ template < typename HandlerT >
 function < R ( Args... ) >::function( HandlerT&& handler )
     : _callable( std::make_shared<callable0<HandlerT , R , Args... > >( 
         std::forward< HandlerT>(handler))) {
-    codex::singleton< method_calls< function > >::instance().call( function_callable_ctor );
+    CALL_RECORD( function_callable_ctor );
 }
 
 template < typename R , typename ... Args >
 function < R ( Args... ) >& function < R ( Args... ) >::operator=( const function& rhs ){
-    codex::singleton< method_calls< function > >::instance().call( function_assign );
+    CALL_RECORD( function_assign );
     _callable = rhs._callable;
     return *this;
 }
 
 template < typename R , typename ... Args >
 function < R ( Args... ) >& function < R ( Args... ) >::operator=( function& rhs ){
-    codex::singleton< method_calls< function > >::instance().call( function_assign_l );
+    CALL_RECORD( function_assign_l );
     _callable = rhs._callable;
     return *this;
 }
 
 template < typename R , typename ... Args >
 function < R ( Args... ) >& function < R ( Args... ) >::operator=( function&& rhs ){
-    codex::singleton< method_calls< function > >::instance().call( function_move_assign );
+    CALL_RECORD( function_move_assign );
     _callable = std::move(rhs._callable);
     return *this;
 }
@@ -80,7 +102,7 @@ function < R ( Args... ) >& function < R ( Args... ) >::operator=( function&& rh
 template < typename R , typename ... Args >
 template < typename HandlerT >
 function < R ( Args... ) >& function < R ( Args... ) >::operator=( HandlerT&& handler ){
-    codex::singleton< method_calls< function > >::instance().call( function_callable_assign );
+    CALL_RECORD( function_callable_assign );
     _callable = std::make_shared<callable0<HandlerT , R , Args... >  >( 
         std::forward< HandlerT>(handler));
     return *this;

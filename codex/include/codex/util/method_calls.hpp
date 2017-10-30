@@ -20,6 +20,9 @@ namespace codex {
             }
             return _calls[ptr];
         }
+        void reset( void ) {
+            _calls.clear();
+        }
     private:
         std::map< int , int > _calls;
     };

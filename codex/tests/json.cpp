@@ -6,7 +6,8 @@ using json = nlohmann::json;
 TEST( json , usage ){
     bool val = true;
     bool nv = not val;
-    json j2= {"pi", 3.141};
+    json j2= {{"pi", 3.141}};
+    j2["pi"];
     j2 = {
         {"pi", 3.141},
         {"happy", true},
