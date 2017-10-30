@@ -3,10 +3,9 @@
 
 #include <atomic>
 #include <memory>
-
 namespace codex { namespace buffer {
 
-template < typename AllocatorT  = std::allocator<uint8_t> >
+template < typename AllocatorT >
 class block {
 public:
     explicit block( const std::size_t size  ) 
