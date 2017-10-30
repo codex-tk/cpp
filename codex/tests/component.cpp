@@ -11,13 +11,10 @@ public:
     ~component_life_check( void ) {
         _is_live = false;
     }
-   
-    DECL_COMPONENT(component_life_check  )
-    
+    DECL_COMPONENT( component_life_check  )  
 private:
     bool& _is_live;
 };
-
 IMPL_COMPONENT(component_life_check )
 
 class null_component{

@@ -1,6 +1,5 @@
 #define CODEX_FUNCTION_TEST
 
-#include <codex/util/method_calls.hpp>
 #include <codex/util/singleton.hpp>
 
 #if defined( CODEX_FUNCTION_TEST )
@@ -15,6 +14,23 @@ constexpr int function_assign = 5;
 constexpr int function_assign_l = 6;
 constexpr int function_move_assign = 7;
 constexpr int function_callable_assign = 8;
+
+template < typename TypeT >
+class method_calls{
+public:
+    method_calls( void ) = default;
+    ~method_calls( void ) = default;
+    void call( int ptr ) {
+        if ( _calls.find(ptr) == _calls.end() )
+            _calls[ptr] = 0;
+        _calls[ptr] = _calls[ptr] + 1;
+    }
+    int call_counts( int ptr ) { return _calls.find(ptr) == _calls.end() ? 0 : _calls[ptr]; }
+    void reset( void ) { _calls.clear(); }
+private:
+    std::map< int , int > _calls;
+};
+
 }
 #define CALL_RECORD( arg ) codex::singleton< method_calls< function > >::instance().call( arg );
 #else

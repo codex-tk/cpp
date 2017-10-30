@@ -14,11 +14,11 @@ if ( ZLIB_FOUND )
     add_definitions( -DENABLE_LIB_Z )
 endif( ZLIB_FOUND )
 
-set(Boost_USE_STATIC_LIBS        ON) # only find static libs
-set(Boost_USE_MULTITHREADED      ON)
-set(Boost_USE_STATIC_RUNTIME    OFF)
 find_package(Boost 1.60.0 COMPONENTS filesystem )
 if(Boost_FOUND)
+    set(Boost_USE_STATIC_LIBS        ON) # only find static libs
+    set(Boost_USE_MULTITHREADED      ON)
+    set(Boost_USE_STATIC_RUNTIME    OFF)
     include_directories(${Boost_INCLUDE_DIRS})
     target_link_libraries( codex.tests ${Boost_LIBRARIES})
     add_definitions( -DENABLE_LIB_BOOST )

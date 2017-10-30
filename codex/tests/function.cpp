@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include <codex/function.hpp>
 
+#if defined ( CODEX_FUNCTION_TEST )
 class function_test_fixture : public testing::Test {
 public:
     void SetUp() override {
@@ -72,6 +73,7 @@ TEST_F( function_test_fixture , assign ) {
     _function_assign = [] {};
     ASSERT_EQ( method_calls->call_counts(codex::function_callable_assign) , 1 );
 }
+#endif
 
 TEST( function  , owner_ship ) {
     int seed = 0;

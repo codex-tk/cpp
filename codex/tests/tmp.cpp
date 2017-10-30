@@ -11,6 +11,9 @@ struct sample {
         ivalue = i;
         return ivalue;
     }
+    void dosome( void ) {
+        ivalue = 0;
+    }
 };
 
 class testTmp : public testing::Test {
@@ -50,9 +53,13 @@ TEST_F( testTmp , member_pointer ) {
 
 TEST_F( testTmp ,  member_function_pointer ){
     codex::tmp::member_function_pointer< sample , int ( int ) >::type mptr = &sample::dosome;
+    codex::tmp::member_function_pointer< sample , void ( void ) >::type mptr_overloaded = &sample::dosome;
+    (_s.*mptr_overloaded)();
+    ASSERT_EQ( _s.ivalue , 0 );
     ASSERT_EQ((_s.*mptr)(32) , 32 );
     ASSERT_EQ( _s.ivalue , 32 );
-
+    (_ps->*mptr_overloaded)();
+    ASSERT_EQ( _ps->ivalue , 0 );
     ASSERT_EQ((_ps->*mptr)(33) , 33 );
     ASSERT_EQ( _ps->ivalue , 33 );
 }
