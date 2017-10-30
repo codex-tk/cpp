@@ -61,7 +61,6 @@ TEST( byte_buffer , ptr ) {
         ASSERT_EQ(  i , value );
         ++i;
     }
-    
 }
 
 TEST( byte_buffer , owner ) {
@@ -91,4 +90,19 @@ TEST( byte_buffer , owner1 ) {
     move = std::move( buf );
     ASSERT_EQ( move.block_ptr()->refcount() , 1 ); 
 }
-    
+
+TEST( byte_buffer , reserve ) {
+    codex::buffer::byte_buffer buf(4);
+    void* orig_ptr = buf.block_ptr()->data();
+    // 01--
+    buf.write_skip(2);
+    ASSERT_EQ( buf.block_ptr()->data() , buf.read_ptr() );
+    //-1--
+    buf.read_skip(1);
+    ASSERT_NE( buf.block_ptr()->data() , buf.read_ptr() );
+    buf.reserve(3);
+    // 1---
+    ASSERT_EQ( buf.block_ptr()->data() , orig_ptr );
+    ASSERT_EQ( buf.writable_size() , 3 );
+    ASSERT_EQ( buf.block_ptr()->data() , buf.read_ptr() );
+}

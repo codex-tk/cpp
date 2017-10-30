@@ -33,6 +33,8 @@ public:
     void swap( basic_byte_buffer& rhs ) noexcept ;
 
     block_ptr_type& block_ptr( void );
+
+    void reserve( const std::size_t size );
 private:
     block_ptr_type _block_ptr;
     int _read_pos;

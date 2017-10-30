@@ -115,4 +115,22 @@ typename basic_byte_buffer<BlockFatoryT>::block_ptr_type&
     return _block_ptr;
 }
 
+template < typename BlockFatoryT >
+void basic_byte_buffer<BlockFatoryT>::reserve( const std::size_t size ){
+    if ( writable_size() >= static_cast<int>(size) ) {
+        return;
+    }
+    if ( this->size() - readable_size() >= static_cast<int>(size) ) {
+        std::memmove( _block_ptr->data() , read_ptr() , readable_size());
+        _write_pos = readable_size();
+        _read_pos = 0;
+        return;
+    }
+    block_ptr_type nbptr = BlockFatoryT::create(readable_size() + size );
+    memcpy( nbptr->data() , read_ptr() , readable_size() );
+    _block_ptr.swap( nbptr );
+    _write_pos = readable_size();
+    _read_pos = 0;
+}
+
 }}
