@@ -31,6 +31,7 @@ public:
 
 typedef block_factory<> default_block_factory; 
 
+// todo ref block factory
 
 }}
 
