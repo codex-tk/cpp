@@ -1,7 +1,7 @@
 #ifndef __codex_buffer_stream_h__
 #define __codex_buffer_stream_h__
 
-#include <codex/buffer/byte_buffer.hpp>
+#include <codex/buffer/basic_byte_buffer.hpp>
 
 namespace codex { namespace buffer {
 
