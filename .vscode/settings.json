@@ -92,6 +92,7 @@
         "xtr1common": "cpp",
         "xtree": "cpp",
         "xutility": "cpp",
-        "__mutex_base": "cpp"
+        "__mutex_base": "cpp",
+        "any": "cpp"
     }
 }

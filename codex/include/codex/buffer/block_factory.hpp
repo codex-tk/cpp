@@ -29,7 +29,7 @@ public:
     }
 };
 
-typedef block_factory<> default_block_factory; 
+typedef block_factory<> default_block_factory_service; 
 
 // todo ref block factory
 

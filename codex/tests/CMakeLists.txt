@@ -3,7 +3,8 @@ project( codex.tests )
 include_directories( ${CMAKE_SOURCE_DIR}/codex/include )
 include_directories( ${CMAKE_SOURCE_DIR}/json/src )
 
-file(GLOB SRCS ./*.cpp)
+file(GLOB_RECURSE SRCS "*.cpp" )
+#file(GLOB SRCS ./*.cpp)
 
 add_executable( codex.tests ${SRCS} )
 

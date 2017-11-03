@@ -1,6 +1,30 @@
 #include <gtest/gtest.h>
 #include <codex/util/base64.hpp>
 #include <codex/util/checksum.hpp>
+
+class conv_b64_test : public testing::Test {
+public:
+  void SetUp() override {
+    src = std::string("base64test");
+    enc = std::string("YmFzZTY0dGVzdA==");
+    src0 = std::string("Man is distinguished, not only by his reason, but by this singular passion from other animals, which is a lust of the mind, that by a perseverance of delight in the continued and indefatigable generation of knowledge, exceeds the short vehemence of any carnal pleasure.");
+    enc0 = std::string("TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdCBvbmx5IGJ5IGhpcyByZWFzb24sIGJ1dCBieSB0\
+aGlzIHNpbmd1bGFyIHBhc3Npb24gZnJvbSBvdGhlciBhbmltYWxzLCB3aGljaCBpcyBhIGx1\
+c3Qgb2YgdGhlIG1pbmQsIHRoYXQgYnkgYSBwZXJzZXZlcmFuY2Ugb2YgZGVsaWdodCBpbiB0\
+aGUgY29udGludWVkIGFuZCBpbmRlZmF0aWdhYmxlIGdlbmVyYXRpb24gb2Yga25vd2xlZGdl\
+LCBleGNlZWRzIHRoZSBzaG9ydCB2ZWhlbWVuY2Ugb2YgYW55IGNhcm5hbCBwbGVhc3VyZS4=");
+
+  }
+  void TearDown() override {
+  }
+protected:
+  std::string src;
+  std::string enc;
+  std::string src0;
+  std::string enc0;
+};
+
+
 #if defined ( ENABLE_LIB_BOOST)
 #include <boost/archive/iterators/binary_from_base64.hpp>
 #include <boost/archive/iterators/base64_from_binary.hpp>
@@ -28,28 +52,6 @@ TEST_F(conv_b64_test, boost) {
 }
   
 #endif
-
-class conv_b64_test : public testing::Test {
-public:
-  void SetUp() override {
-    src = std::string("base64test");
-    enc = std::string("YmFzZTY0dGVzdA==");
-    src0 = std::string("Man is distinguished, not only by his reason, but by this singular passion from other animals, which is a lust of the mind, that by a perseverance of delight in the continued and indefatigable generation of knowledge, exceeds the short vehemence of any carnal pleasure.");
-    enc0 = std::string("TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdCBvbmx5IGJ5IGhpcyByZWFzb24sIGJ1dCBieSB0\
-aGlzIHNpbmd1bGFyIHBhc3Npb24gZnJvbSBvdGhlciBhbmltYWxzLCB3aGljaCBpcyBhIGx1\
-c3Qgb2YgdGhlIG1pbmQsIHRoYXQgYnkgYSBwZXJzZXZlcmFuY2Ugb2YgZGVsaWdodCBpbiB0\
-aGUgY29udGludWVkIGFuZCBpbmRlZmF0aWdhYmxlIGdlbmVyYXRpb24gb2Yga25vd2xlZGdl\
-LCBleGNlZWRzIHRoZSBzaG9ydCB2ZWhlbWVuY2Ugb2YgYW55IGNhcm5hbCBwbGVhc3VyZS4=");
-
-  }
-  void TearDown() override {
-  }
-protected:
-  std::string src;
-  std::string enc;
-  std::string src0;
-  std::string enc0;
-};
 
 
 TEST_F(conv_b64_test, enc) {

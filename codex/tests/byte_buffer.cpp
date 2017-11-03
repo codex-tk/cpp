@@ -10,36 +10,36 @@ TEST( byte_buffer , ctor ) {
 
 TEST( byte_buffer , skip ) {
     codex::buffer::byte_buffer buf(1024);
-    ASSERT_EQ( buf.read_skip(24) , 0 );
-    ASSERT_EQ( buf.write_skip(24) , 24 );
+    ASSERT_EQ( buf.read_seek(24) , 0 );
+    ASSERT_EQ( buf.write_seek(24) , 24 );
 
     ASSERT_EQ( buf.writable_size() , 1024 - 24 );
     ASSERT_EQ( buf.readable_size() , 24 );
 
-    ASSERT_EQ( buf.read_skip(4) , 4 );
+    ASSERT_EQ( buf.read_seek(4) , 4 );
     ASSERT_EQ( buf.readable_size() , 20 );
 
-    ASSERT_EQ( buf.read_skip(-2) , -2 );
+    ASSERT_EQ( buf.read_seek(-2) , -2 );
     ASSERT_EQ( buf.readable_size() , 22 );
 
-    ASSERT_EQ( buf.read_skip(-10) , -2 );
+    ASSERT_EQ( buf.read_seek(-10) , -2 );
     ASSERT_EQ( buf.readable_size() , 24 );
 
-    ASSERT_EQ( buf.write_skip(-2) , -2 );
+    ASSERT_EQ( buf.write_seek(-2) , -2 );
     ASSERT_EQ( buf.readable_size() , 22 );
     
-    ASSERT_EQ( buf.write_skip(10000) , 1002 );
+    ASSERT_EQ( buf.write_seek(10000) , 1002 );
     ASSERT_EQ( buf.readable_size() , 1024 );
 
-    ASSERT_EQ( buf.write_skip(-10000) , -1024 );
+    ASSERT_EQ( buf.write_seek(-10000) , -1024 );
     ASSERT_EQ( buf.readable_size() , 0 );
 
-    ASSERT_EQ( buf.write_skip(24) , 24 );
-    ASSERT_EQ( buf.read_skip(4) , 4 );
+    ASSERT_EQ( buf.write_seek(24) , 24 );
+    ASSERT_EQ( buf.read_seek(4) , 4 );
 
     ASSERT_EQ( buf.readable_size() , 20 );
 
-    ASSERT_EQ( buf.write_skip(-24) , -20 );
+    ASSERT_EQ( buf.write_seek(-24) , -20 );
 }
 
 TEST( byte_buffer , ptr ) {
@@ -48,7 +48,7 @@ TEST( byte_buffer , ptr ) {
     int i = 0;
     while ( buf.writable_size() >= sizeof(int)) {
         memcpy( buf.write_ptr() , &i , sizeof(int) );
-        buf.write_skip( sizeof(int));
+        buf.write_seek( sizeof(int));
         ++i;
     }
     ASSERT_EQ( buf.writable_size() , 0 );
@@ -57,7 +57,7 @@ TEST( byte_buffer , ptr ) {
     while ( buf.readable_size() >= sizeof(int)) {
         int value = 0;
         memcpy( &value , buf.read_ptr() , sizeof(int) );
-        buf.read_skip( sizeof(int));
+        buf.read_seek( sizeof(int));
         ASSERT_EQ(  i , value );
         ++i;
     }
@@ -95,14 +95,23 @@ TEST( byte_buffer , reserve ) {
     codex::buffer::byte_buffer buf(4);
     void* orig_ptr = buf.block_ptr()->data();
     // 01--
-    buf.write_skip(2);
+    buf.write_seek(2);
     ASSERT_EQ( buf.block_ptr()->data() , buf.read_ptr() );
     //-1--
-    buf.read_skip(1);
+    buf.read_seek(1);
     ASSERT_NE( buf.block_ptr()->data() , buf.read_ptr() );
     buf.reserve(3);
     // 1---
     ASSERT_EQ( buf.block_ptr()->data() , orig_ptr );
     ASSERT_EQ( buf.writable_size() , 3 );
     ASSERT_EQ( buf.block_ptr()->data() , buf.read_ptr() );
+}
+
+TEST( byte_buffer , consume_commit_prepare ) {
+    codex::buffer::byte_buffer buf(4);  
+    memset( buf.prepare(1) , 0x01 , 1 );
+    ASSERT_EQ(buf.commit(1) , 1 );
+    ASSERT_EQ(buf.readable_size() , 1 );
+    ASSERT_EQ(buf.writable_size() , 3 );
+    ASSERT_EQ(buf.consume(1) , 1 );
 }

@@ -5,14 +5,17 @@
 
 namespace codex { namespace buffer {
 
+template < typename BufferT >
 class stream{
 public:
-    explicit stream( const std::size_t size );
+    explicit stream( BufferT& buffer );
     ~stream( void );
 private:
-    codex::buffer::byte_buffer _buffer;
+    BufferT& _buffer;
 };
 
 }}
+
+#include <codex/buffer/stream.ipp>
 
 #endif
