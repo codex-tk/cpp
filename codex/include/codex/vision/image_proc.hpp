@@ -6,6 +6,7 @@
 #include <codex/vision/kernel.hpp>
 #include <codex/vision/fft.hpp>
 #include <cmath>
+#include <codex/util/math.hpp>
 
 namespace codex { namespace vision {
 
@@ -229,8 +230,8 @@ namespace codex { namespace vision {
                    , double tx                  // trans x
                    , double ty )                // trans y
     {
-        double cr = std::cos( rotation * M_PI/180.0 );
-        double sr = std::sin( rotation * M_PI/180.0 );
+        double cr = std::cos( rotation * codex::math::pi / 180.0 );
+        double sr = std::sin( rotation * codex::math::pi / 180.0 );
 
         for ( std::size_t r = 0 ; r < src.height() ; ++r ) {
             for ( std::size_t c = 0 ; c < src.width() ; ++c ) {

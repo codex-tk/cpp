@@ -1,9 +1,9 @@
 #include <codex/vision/hough.hpp>
-
+#include <codex/util/math.hpp>
 
 namespace codex { namespace vision {
 namespace detail {
-    const double deg2rad = M_PI / 180;
+    const double deg2rad = codex::math::pi / 180;
 }
 /*
     rho = x sin t + y con t;
@@ -40,7 +40,7 @@ void hough_line( const image& src , int num_of_cross_lines
     std::vector< double > sin_lut(num_of_theta);
     std::vector< double > cos_lut(num_of_theta);
 
-    const double to_rad = M_PI / num_of_theta;
+    const double to_rad = codex::math::pi / num_of_theta;
 
     for ( int i = 0 ; i < num_of_theta ; ++i ) {
         sin_lut[i] = std::sin( i * to_rad );
@@ -93,7 +93,7 @@ void hough_line( const image& src , int num_of_cross_lines
     std::vector< double > sin_lut(num_of_theta);
     std::vector< double > cos_lut(num_of_theta);
 
-    const double to_rad = M_PI / num_of_theta;
+    const double to_rad = codex::math::pi / num_of_theta;
 
     for ( int i = 0 ; i < num_of_theta ; ++i ) {
         sin_lut[i] = std::sin( i * to_rad );
