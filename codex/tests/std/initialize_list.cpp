@@ -60,7 +60,7 @@ private:
     ns::any _value;
 };
 
-void initialize_list_retrieve( std::initializer_list<any_value>&& l  ) {
+void initialize_list_traversal( std::initializer_list<any_value>&& l  ) {
     for ( const any_value& nr : l ) {
         nr.print();
     }
@@ -69,5 +69,5 @@ void initialize_list_retrieve( std::initializer_list<any_value>&& l  ) {
 }
 
 TEST( multiple_types_initialize_list , usage ){
-    initialize_list_retrieve( { 0 , "str" , { 3 , "1" }} );
+    initialize_list_traversal( { 0 , "str" , { 3 , "1" } , { { "1" , 2} }} );
 }
