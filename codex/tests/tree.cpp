@@ -79,7 +79,9 @@ void post_order_i( node<Type>* pnode , std::vector<Type>& outputs ) {
         }
         pnode = stack.back();
         stack.pop_back();
-        if ( pnode->right && stack.back() == pnode->right )
+        if ( pnode->right 
+            && !stack.empty() 
+            && stack.back() == pnode->right )
         {
             stack.pop_back();
             stack.push_back(pnode);

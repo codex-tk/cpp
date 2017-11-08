@@ -1,4 +1,5 @@
 #include <codex/vision/canny.hpp>
+#include <codex/util/math.hpp>
 
 namespace codex { namespace vision {
 
@@ -8,7 +9,7 @@ namespace detail {
                                           , image& angle
                                           , uint8_t threshold_lo)
     {
-        double rad2deg = 180.0 / M_PI;
+        double rad2deg = 180.0 / codex::math::pi;
 
         for ( std::size_t r = 1 ; r < gss_img.height() - 1 ; ++r ) {
             double* derivative_ptr = derivative.ptr(r);

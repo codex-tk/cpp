@@ -1,6 +1,6 @@
 #include <codex/vision/fft.hpp>
 #include <cmath>
-
+#include <codex/util/math.hpp>
 namespace codex { namespace vision {
 
 
@@ -102,7 +102,7 @@ void fft_phs_image( const image_base<double>& re , const image_base<double>& im 
         double* temp_ptr = temp.ptr(r);
         uint8_t* dst_ptr = dst.ptr(r);
         for ( std::size_t c = 0 ; c < re.width() ; ++c ) {
-            dst_ptr[c] = static_cast<uint8_t>( (temp_ptr[c] * ( 127 / M_PI )) + 128 );
+            dst_ptr[c] = static_cast<uint8_t>( (temp_ptr[c] * ( 127 / codex::math::pi )) + 128 );
         }
     }
 }
