@@ -1,0 +1,102 @@
+#include <gtest/gtest.h>
+#include <codex/util/utility.hpp>
+
+
+TEST( pack , comma_op ) {
+    int i , j;
+    i = 0;
+    j = i + 2;
+
+    ASSERT_EQ( i , 0 );
+    ASSERT_EQ( j , 2 );
+
+    i = 10; j = 10;
+    j = ( i = 0 , i+2);
+
+    ASSERT_EQ( i , 0 );
+    ASSERT_EQ( j , 2 );
+}
+
+template < typename ... Ts >
+void print_sample( Ts ... args ) {
+    //int arr [ sizeof...(args) + 2 ] = { 0 , args... , 4 };
+    using expend = int[];
+    (void)expend{ 0 , (std::cout << args, 0)... };
+    //int dummy[sizeof...(Ts)] = { (std::cout << args, 0)... };
+}
+
+TEST( pack , print_sample ) {
+    print_sample( 1 , 2, 3 , "Test" );
+}
+
+template < typename T , typename U , typename ... Ts >
+void tuple_test( T t , U u , Ts ... ts ) {
+    std::tuple< T , U , Ts...> tuple0{ t , u ,ts...};
+    std::tuple< T , Ts... , U> tuple1{ t , ts... , u };
+    std::tuple< Ts... , T , U> tuple2{ ts... , t , u };
+}
+
+TEST( pack , tuple_test ) {
+    tuple_test( 1 , 2, 3 , "Test" );
+}
+
+
+template < typename ... Ts >
+class base0{
+public:
+    base0() {
+        std::cout << codex::pretty_type_name( *this ) << std::endl;
+    }
+};
+
+template < typename T, typename ... Ts >
+class base1{
+public:
+    base1() {
+        std::cout << codex::pretty_type_name( *this ) << std::endl;
+    }
+    base1( const int i ) {
+
+    }
+
+    void g() {
+
+    }
+};
+
+
+template < typename ... Ts >
+class derived : private base0< Ts ... > ,
+                private base1< Ts , Ts ... > ... 
+            
+{
+public:
+    // visuatl studio not works
+    //using base1<Ts, Ts...>::g...;
+    derived(){
+    }
+};
+
+TEST( pack , derived ) {
+    derived< int , double , char > object;
+    /*
+    1: class base0<int,double,char>
+    1: class base1<int,int,double,char>
+    1: class base1<double,int,double,char>
+    1: class base1<char,int,double,char>
+    */
+}
+
+/*// visuatl studio not works
+struct b0 { void g(){  } };
+struct b1 { void g(){  } };
+struct b2 { void g(){  } };
+
+template <typename... bases>
+struct X : bases... {
+	using bases::g...;
+};
+
+TEST( pack , X ) {
+    X< b0 , b1 , b2 > x;
+}*/
