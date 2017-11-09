@@ -28,7 +28,8 @@ if(MSVC)
 	add_definitions( /std:c++latest )
 	add_definitions( -DGTEST_LANG_CXX11=1 )
 else()
-	add_definitions( -Wall -std=c++1z -o2 -g -ggdb  )
+	#-std=c++1z 
+	add_definitions( -Wall -std=c++1z  -o2 -g -ggdb  )
 endif()
 
 add_subdirectory( googletest )

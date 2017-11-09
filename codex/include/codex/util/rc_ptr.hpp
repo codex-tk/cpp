@@ -62,11 +62,11 @@ public:
     TypeT* get(void) const {
         return _ptr;
     }
-
+/*
     void attach( TypeT* t ) {
         release();
         _ptr = t;
-    }
+    }*/
 
     TypeT* detach( void ) {
         TypeT* old = _ptr;
