@@ -106,9 +106,9 @@ public:
         return "service";
     }
 public:
-    DECL_INTERFACE_COMPONENT( service , codex::tmp::null_type )
+    DECL_INTERFACE_COMPONENT( service , codex::null_type )
 };
-IMPL_INTERFACE_COMPONENT( service , codex::tmp::null_type )
+IMPL_INTERFACE_COMPONENT( service , codex::null_type )
 
 class sample_service : public service{
 public:

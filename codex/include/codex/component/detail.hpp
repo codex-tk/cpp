@@ -28,7 +28,7 @@ struct is_interface {
 };
 
 template <>
-struct is_interface<codex::tmp::null_type>{
+struct is_interface<codex::null_type>{
     enum { 
         value = false
     };
@@ -49,8 +49,8 @@ struct interface_component {
 };
 
 template <>
-struct interface_component<codex::tmp::null_type>{
-    typedef codex::tmp::null_type type;
+struct interface_component<codex::null_type>{
+    typedef codex::null_type type;
 };
 
 template < typename T >

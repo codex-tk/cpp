@@ -31,8 +31,8 @@ protected:
 TEST_F( testTmp , member_pointer ) {
     int sample::* piv = &sample::ivalue;
     double sample::* pdv = &sample::dvalue;
-    codex::tmp::member_pointer<sample,int>::type piv0 = &sample::ivalue;
-    codex::tmp::member_pointer<sample,double>::type pdv0 = &sample::dvalue;
+    codex::member_pointer<sample,int>::type piv0 = &sample::ivalue;
+    codex::member_pointer<sample,double>::type pdv0 = &sample::dvalue;
 
     _s.*piv = 1;
     _s.*pdv = 0.1;
@@ -52,8 +52,8 @@ TEST_F( testTmp , member_pointer ) {
 }
 
 TEST_F( testTmp ,  member_function_pointer ){
-    codex::tmp::member_function_pointer< sample , int ( int ) >::type mptr = &sample::dosome;
-    codex::tmp::member_function_pointer< sample , void ( void ) >::type mptr_overloaded = &sample::dosome;
+    codex::member_function_pointer< sample , int ( int ) >::type mptr = &sample::dosome;
+    codex::member_function_pointer< sample , void ( void ) >::type mptr_overloaded = &sample::dosome;
     (_s.*mptr_overloaded)();
     ASSERT_EQ( _s.ivalue , 0 );
     ASSERT_EQ((_s.*mptr)(32) , 32 );

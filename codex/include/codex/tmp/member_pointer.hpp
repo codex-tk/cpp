@@ -1,7 +1,7 @@
 #ifndef __codex_tmp_member_pointer_h__
 #define __codex_tmp_member_pointer_h__
 
-namespace codex { namespace tmp {
+namespace codex {
 
 template < typename T , typename MemberT >
 struct member_pointer{
@@ -16,6 +16,6 @@ struct member_function_pointer<T , R ( Args ... ) >{
     typedef R (T::*type)( Args ... );
 };
 
-}}
+}
 
 #endif

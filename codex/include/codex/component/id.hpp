@@ -34,10 +34,10 @@ struct normal_type{};
     codex::component::id< compnent , parent , codex::component::normal_type > compnent::_component_id;
 
 #define DECL_COMPONENT( compnent  )\
-    DECL_NORMAL_COMPONENT( compnent , codex::tmp::null_type )
+    DECL_NORMAL_COMPONENT( compnent , codex::null_type )
 
 #define IMPL_COMPONENT( compnent  )\
-    IMPL_NORMAL_COMPONENT( compnent , codex::tmp::null_type )
+    IMPL_NORMAL_COMPONENT( compnent , codex::null_type )
 
 }}
 
