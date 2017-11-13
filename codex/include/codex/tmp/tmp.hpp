@@ -18,7 +18,7 @@ template < typename ... Ts > struct type_list;
 template < unsigned N , typename T > struct list_element;
 
 template < unsigned N , typename Head , typename ... Tail > 
-struct list_element< N , type_list< Head , Tail ... >>
+struct list_element< N , type_list< Head , Tail ... > >
     : list_element< N - 1 , type_list< Tail... > > {};
 
 template < typename Head , typename ... Tail > 
@@ -44,23 +44,56 @@ struct type_list {
 };
 
 template <  template < typename ... Ts > class U , typename ... Ts >
-struct type_list<U< Ts... >>  : type_list< Ts ... >{};
+struct type_list<U< Ts... > >  : type_list< Ts ... >{};
 
 
-template < unsigned N , typename T > struct storage { T data; };
-template < typename T , typename ... Ts > struct storage_helper{};
-template < unsigned s0 , unsigned ... s , typename T0 , typename ... Ts >
-struct storage_helper< codex::seq< s0 , s ... > , T0 , Ts... > 
-    : storage< s0 , T0 > 
-    , storage_helper< codex::seq< s... > , Ts ... > {};
+namespace sample {
+    //--------------------------------------------------------------------------------------------------
+    template < unsigned N , typename T > struct storage { T data; };
+    template < typename T , typename ... Ts > struct storage_helper{};
+    template < unsigned s0 , unsigned ... s , typename T0 , typename ... Ts >
+    struct storage_helper< codex::seq< s0 , s ... > , T0 , Ts... > 
+        : storage< s0 , T0 > 
+        , storage_helper< codex::seq< s... > , Ts ... > {};
 
 
-template < typename ... Args > 
-struct sample_tuple : storage_helper< typename codex::make_seq< sizeof...(Args) >::type , Args... >{};
+    template < typename ... Args > 
+    struct sample_tuple : storage_helper< typename codex::make_seq< sizeof...(Args) >::type , Args... >{};
 
-template < unsigned N  , typename T >
-T& sample_tuple_get( storage<N,T>& storage ) {
-    return storage.data;
+    template < unsigned N  , typename T >
+    T& sample_tuple_get( storage<N,T>& storage ) {
+        return storage.data;
+    }
+    //--------------------------------------------------------------------------------------------------
+    template < unsigned N , typename T > struct value { 
+        T data; 
+        value( void ) {}
+        value( T&& data ) : data(data){}
+    };
+
+    template < typename N , typename ... Ts > struct basic_values;
+
+    template < unsigned ... S , typename ... Ts > 
+    struct basic_values< codex::seq< S... > , Ts ... > : value< S , Ts >... {
+        basic_values( Ts&& ... ts ) 
+            : value<S,Ts>( std::forward<Ts>(ts))... {}
+    };
+
+    template < typename ... Ts >
+    struct tuple : basic_values< 
+            typename codex::make_seq< sizeof...(Ts)>::type 
+            , Ts ... > 
+    {
+        using basic_values< 
+            typename codex::make_seq< sizeof...(Ts)>::type 
+            , Ts ... >::basic_values;
+    };
+
+    template < unsigned N  , typename T >
+    T& get_value( value<N,T>& value ) {
+        return value.data;
+    }
+    //--------------------------------------------------------------------------------------------------
 }
 
 }
