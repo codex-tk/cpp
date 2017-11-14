@@ -49,26 +49,18 @@ public:
     }
 };
 
-template < typename T, typename ... Ts >
+template < typename ... Ts >
 class base1{
 public:
-    base1() {
-        std::cout << codex::pretty_type_name( *this ) << std::endl;
-    }
-    base1( const int i ) {
-
-    }
-
-    void g() {
-
-    }
+    base1() { std::cout << codex::pretty_type_name( *this ) << std::endl; }
+    base1( const int i ) { }
+    void g() { }
 };
 
 
 template < typename ... Ts >
 class derived : private base0< Ts ... > ,
                 private base1< Ts , Ts ... > ... 
-            
 {
 public:
     // visuatl studio not works
@@ -100,3 +92,27 @@ struct X : bases... {
 TEST( pack , X ) {
     X< b0 , b1 , b2 > x;
 }*/
+
+namespace {
+    template < typename ... Ts >
+    int f ( Ts ... ts ) {
+        return ( ... + ts ); /// ((((( ts1 + ts2 ) + ts3) + ...  ) + ts(N-1) ) + ts(N))
+        // return ( ts + ... ); /// ts1 + ( ts2 + ( ts3 + ( ... + ( ts(N-1) + tsN ))))
+    }
+
+    template < typename ... Ts >
+    int h( Ts ... ts ) {
+        return ( ... * ts );
+    }
+
+    template < typename ... Ts >
+    int g( Ts ... ts ) {
+        return f ( h( ts ... ) + ts ... );
+    }
+}
+
+TEST( pack , pack ) {
+    ASSERT_EQ( h( 2 , 3 , 4 ) , 2 * 3 * 4 );
+    ASSERT_EQ( f( 2 , 3 , 4 ) , 2 + 3 + 4 );
+    ASSERT_EQ( g(2,3,4) , f( h( 2 , 3 , 4 ) + 2 , h( 2 , 3 , 4 ) + 3 , h( 2 , 3 , 4 ) + 4 ) );
+}

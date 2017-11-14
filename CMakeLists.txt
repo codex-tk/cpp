@@ -32,6 +32,32 @@ else()
 	add_definitions( -Wall -std=c++1z  -o2 -g -ggdb )
 endif()
 
+find_package( ZLIB )
+if ( ZLIB_FOUND )
+    include_directories( ${ZLIB_INCLUDE_DIRS} )
+    #target_link_libraries( codex.tests ${ZLIB_LIBRARIES} )
+    add_definitions( -DENABLE_LIB_Z )
+endif( ZLIB_FOUND )
+
+#[[
+set(Boost_NO_SYSTEM_PATHS TRUE) 
+if (Boost_NO_SYSTEM_PATHS)
+  set(BOOST_ROOT "/Users/ghtak/boost")
+  set(BOOST_INCLUDE_DIRS "${BOOST_ROOT}/include")
+  set(BOOST_LIBRARY_DIRS "${BOOST_ROOT}/lib")
+endif (Boost_NO_SYSTEM_PATHS)
+]]
+find_package(Boost 1.60.0 COMPONENTS filesystem )
+if(Boost_FOUND)
+	message(STATUS  ${Boost_INCLUDE_DIRS} )	
+    set(Boost_USE_STATIC_LIBS        ON) # only find static libs
+    set(Boost_USE_MULTITHREADED      ON)
+    set(Boost_USE_STATIC_RUNTIME    OFF)
+    include_directories(${Boost_INCLUDE_DIRS})
+    #target_link_libraries( codex.tests ${Boost_LIBRARIES})
+    add_definitions( -DENABLE_LIB_BOOST )
+endif()
+
 add_subdirectory( googletest )
 add_subdirectory( codex )
 add_subdirectory( codex/tests )
