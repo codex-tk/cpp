@@ -1,11 +1,17 @@
 #include <gtest/gtest.h>
 #include <codex/util/utility.hpp>
 #include <codex/tmp/tmp.hpp>
+namespace {
 
-template< unsigned ... > struct seq{};
-
+template < unsigned ... > struct seq{};
 template < unsigned max , unsigned ...s > struct make_seq0 { typedef int type; };
 template < unsigned ... s > struct make_seq0< 0 , s ... > { typedef char type; };
+
+
+template < unsigned max , unsigned ...s > struct make_seq1 { typedef seq<max - 1, max - 1, s... > type;  };
+template < unsigned ... s > struct make_seq1< 0 , s ... > { typedef seq<s...> type;  };
+
+}
 
 TEST( make_seq , view ) {
     std::cout << codex::pretty_type_name( make_seq0<0>::type{} ) << std::endl; // char
@@ -15,9 +21,6 @@ TEST( make_seq , view ) {
     std::cout << codex::pretty_type_name( make_seq0<4>::type{} ) << std::endl; // int
     std::cout << codex::pretty_type_name( make_seq0<5>::type{} ) << std::endl; // int
 }
-
-template < unsigned max , unsigned ...s > struct make_seq1 { typedef seq<max - 1, max - 1, s... > type;  };
-template < unsigned ... s > struct make_seq1< 0 , s ... > { typedef seq<s...> type;  };
 
 TEST( make_seq , view2 ) {
     std::cout << codex::pretty_type_name( make_seq1<0>::type{} ) << std::endl; // char
@@ -34,23 +37,23 @@ TEST( make_seq , view2 ) {
 
 
 TEST( make_seq , view3 ) {
-    std::cout << codex::pretty_type_name( codex::make_seq<0>::type{} ) << std::endl; // char
+    std::cout << codex::pretty_type_name( codex::sample::make_seq<0>::type{} ) << std::endl; // char
     // make_seq< 0 , s ... > - > make_seq1< 0 , none > -> seq<>
 
-    std::cout << codex::pretty_type_name( codex::make_seq<1>::type{} ) << std::endl; // int
+    std::cout << codex::pretty_type_name( codex::sample::make_seq<1>::type{} ) << std::endl; // int
     // make_seq< max = 1 , s ... = none  > ->  make_seq< 0 , 0 , none > -> seq<0>
 
-    std::cout << codex::pretty_type_name( codex::make_seq<2>::type{} ) << std::endl; // int
+    std::cout << codex::pretty_type_name( codex::sample::make_seq<2>::type{} ) << std::endl; // int
     // make_seq< max = 2 , s ... = none  > -> : make_seq< 1 , 1 > -> : make_seq< 0 , 1  > -> seq< 0 , 1 >
 
-    std::cout << codex::pretty_type_name( codex::make_seq<3>::type{} ) << std::endl; // int
+    std::cout << codex::pretty_type_name( codex::sample::make_seq<3>::type{} ) << std::endl; // int
     // make_seq< 3 , ... > - > make_seq< 2 , 2 , ... > -> make_seq< 1 , 1 , 2 , ... > 
     //-> make_seq< 0 , 0 , 1, 2 , ... > -> seq< 0 , 1 , 2 >
     
-    std::cout << codex::pretty_type_name( codex::make_seq<4>::type{} ) << std::endl; // int
-    std::cout << codex::pretty_type_name( codex::make_seq<5>::type{} ) << std::endl; // int
+    std::cout << codex::pretty_type_name( codex::sample::make_seq<4>::type{} ) << std::endl; // int
+    std::cout << codex::pretty_type_name( codex::sample::make_seq<5>::type{} ) << std::endl; // int
 
-    std::cout << codex::pretty_type_name( codex::make_seq<6>::type{} ) << std::endl;
+    std::cout << codex::pretty_type_name( codex::sample::make_seq<6>::type{} ) << std::endl;
 }
 
 TEST( tmp , type_list ) {
@@ -64,35 +67,35 @@ TEST( tmp , type_list ) {
     ASSERT_EQ( codex::sample::sample_tuple_get< 2 > (tuple) , 'c'  );
 
     std::cout << codex::pretty_type_name( 
-        codex::type_list< codex::sample::sample_tuple< int , double , char >>::type<0> {}  ) << std::endl;
+        codex::sample::type_list< codex::sample::sample_tuple< int , double , char >>::type<0> {}  ) << std::endl;
 
-    static_assert(std::is_same< codex::type_list< codex::sample::sample_tuple< int , double , char >>::type<0> , int >::value);
+    static_assert(std::is_same< codex::sample::type_list< codex::sample::sample_tuple< int , double , char >>::type<0> , int >::value);
     
     std::cout << codex::pretty_type_name( 
-        codex::type_list< codex::sample::sample_tuple< int , double , char , std::string >>::last {}  ) << std::endl;
+        codex::sample::type_list< codex::sample::sample_tuple< int , double , char , std::string >>::last {}  ) << std::endl;
     std::cout << codex::pretty_type_name( 
-        codex::type_list< int , double , char >::type<0> {}  ) << std::endl;
+        codex::sample::type_list< int , double , char >::type<0> {}  ) << std::endl;
     std::cout << codex::pretty_type_name( 
-        codex::type_list< int , double , char >::last {}  ) << std::endl;
+        codex::sample::type_list< int , double , char >::last {}  ) << std::endl;
     std::cout << codex::pretty_type_name( 
-        codex::type_list< std::tuple< int , double , char >>::type<0> {}  ) << std::endl;
+        codex::sample::type_list< std::tuple< int , double , char >>::type<0> {}  ) << std::endl;
     std::cout << codex::pretty_type_name( 
-        codex::type_list< std::tuple< int , double , char >>::last {}  ) << std::endl;
+        codex::sample::type_list< std::tuple< int , double , char >>::last {}  ) << std::endl;
 
     std::cout << codex::pretty_type_name( 
-        codex::type_list< int ,char >::
+        codex::sample::type_list< int ,char >::
                 template push_back< double >::
                     template rebind< std::tuple >{} 
     ) << std::endl;
 
     std::cout << codex::pretty_type_name( 
-        codex::type_list< std::tuple< int ,char > >::
+        codex::sample::type_list< std::tuple< int ,char > >::
                 template push_back< double >::
                     template rebind< std::tuple >{} 
     ) << std::endl;
 
     std::cout << codex::pretty_type_name( 
-        codex::type_list< std::tuple< int ,char > >::pop_back::
+        codex::sample::type_list< std::tuple< int ,char > >::pop_back::
                     template rebind< std::tuple >{} 
     ) << std::endl;
 }
@@ -110,11 +113,11 @@ public:
     };
 
     template < typename T , typename ... > struct sp0;
-    template <typename ... Ts> struct sp0< codex::seq<> , Ts ... > { sp0( std::tuple< Args... >& tup , ...  ) {} };
+    template <typename ... Ts> struct sp0< codex::sample::seq<> , Ts ... > { sp0( std::tuple< Args... >& tup , ...  ) {} };
     template < unsigned S0 , unsigned ... S , typename T , typename ... Ts > 
-    struct sp0< codex::seq<S0 , S...> , T , Ts ... > : sp0< codex::seq< S...> , Ts ... > {
+    struct sp0< codex::sample::seq<S0 , S...> , T , Ts ... > : sp0< codex::sample::seq< S...> , Ts ... > {
         sp0( std::tuple< Args... >& tup , T t , Ts ... ts  )
-            : sp0< codex::seq< S... > , Ts ... >( tup , ts... )
+            : sp0< codex::sample::seq< S... > , Ts ... >( tup , ts... )
         {
             std::get<S0>(tup) = t;
         }
@@ -130,7 +133,7 @@ public:
 
     template < typename T , typename ... Ts > struct sp1;
     template < unsigned ... S , typename ... Ts > 
-    struct sp1< codex::seq< S ... > , Ts ... >  {
+    struct sp1< codex::sample::seq< S ... > , Ts ... >  {
         sp1( std::tuple< Args... >& tup , Ts ... ts ) {
             auto eval = {0 , (tuple_setter<S,Ts>(tup,ts) , 0)... };
             (void)eval;
@@ -140,14 +143,14 @@ public:
     };
 
     template < unsigned ... S >
-    void set_params( codex::seq< S ... > , Args... args ) {
+    void set_params( codex::sample::seq< S ... > , Args... args ) {
         auto eval = {0 , (tuple_setter<S,Args>(_params,args) , 0)... };
         (void)eval;
     }
 
 
     void set_params( Args ... args ) {
-        set_params( typename codex::make_seq<sizeof...(Args)>::type{} , args ... );
+        set_params( typename codex::sample::make_seq<sizeof...(Args)>::type{} , args ... );
         //sp1< typename codex::make_seq<sizeof...(Args)>::type , Args ... > s1( _params  , args... );
         //sp0< typename codex::make_seq<sizeof...(Args)>::type , Args ... > s0( _params  , args... );
     }
@@ -157,12 +160,12 @@ public:
     }
 
     template < unsigned ... S >
-    R call( codex::seq< S... > ) {
+    R call( codex::sample::seq< S... > ) {
         return _func( std::get<S>(_params)... );
     }
 
     R operator()(){
-        return call( typename codex::make_seq<sizeof...(Args)>::type{} );
+        return call( typename codex::sample::make_seq<sizeof...(Args)>::type{} );
     }
 
      std::tuple< Args ... >& params() {
