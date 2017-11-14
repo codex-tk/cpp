@@ -24,7 +24,7 @@
                 "buildDirectory": "/Users/ghtak/cpp/build/codex",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb",
                     "includePath": [
                       {
                         "path": "/Users/ghtak/cpp/codex/include"
@@ -116,7 +116,7 @@
                 "buildDirectory": "/Users/ghtak/cpp/build/codex/tests",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb",
                     "defines": [
                       "ENABLE_LIB_BOOST",
                       "ENABLE_LIB_Z"
@@ -190,107 +190,12 @@
             "targets": [
               {
                 "artifacts": [
-                  "/Users/ghtak/cpp/build/googletest/googlemock/libgmock_maind.a"
-                ],
-                "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
-                    "includePath": [
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc",
-                      "src/gmock_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgmock_maind.a",
-                "linkerLanguage": "CXX",
-                "name": "gmock_main",
-                "sourceDirectory": "/Users/ghtak/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/Users/ghtak/cpp/build/googletest/googlemock/gtest/libgtest_maind.a"
-                ],
-                "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
-                    "includePath": [
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgtest_maind.a",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "/Users/ghtak/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/Users/ghtak/cpp/build/googletest/googlemock/gtest/libgtestd.a"
-                ],
-                "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
-                    "includePath": [
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgtestd.a",
-                "linkerLanguage": "CXX",
-                "name": "gtest",
-                "sourceDirectory": "/Users/ghtak/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
                   "/Users/ghtak/cpp/build/codex/libcodexd.a"
                 ],
                 "buildDirectory": "/Users/ghtak/cpp/build/codex",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb",
                     "includePath": [
                       {
                         "path": "/Users/ghtak/cpp/codex/include"
@@ -370,48 +275,12 @@
               },
               {
                 "artifacts": [
-                  "/Users/ghtak/cpp/build/googletest/googlemock/libgmockd.a"
-                ],
-                "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
-                    "includePath": [
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgmockd.a",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "/Users/ghtak/cpp/googletest/googlemock",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
                   "/Users/ghtak/cpp/build/codex/tests/codex.tests"
                 ],
                 "buildDirectory": "/Users/ghtak/cpp/build/codex/tests",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb",
                     "defines": [
                       "ENABLE_LIB_BOOST",
                       "ENABLE_LIB_Z"
@@ -475,14 +344,43 @@
                 "name": "codex.tests",
                 "sourceDirectory": "/Users/ghtak/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              }
-            ]
-          },
-          {
-            "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock",
-            "name": "gmock",
-            "sourceDirectory": "/Users/ghtak/cpp/googletest/googlemock",
-            "targets": [
+              },
+              {
+                "artifacts": [
+                  "/Users/ghtak/cpp/build/googletest/googlemock/libgmockd.a"
+                ],
+                "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
+                    "includePath": [
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgmockd.a",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "/Users/ghtak/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
               {
                 "artifacts": [
                   "/Users/ghtak/cpp/build/googletest/googlemock/libgmock_maind.a"
@@ -490,7 +388,7 @@
                 "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
                     "includePath": [
                       {
                         "path": "/Users/ghtak/cpp/googletest/googlemock/include"
@@ -527,7 +425,7 @@
                 "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock/gtest",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
                     "includePath": [
                       {
                         "path": "/Users/ghtak/cpp/googletest/googletest/include"
@@ -556,7 +454,7 @@
                 "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock/gtest",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
                     "includePath": [
                       {
                         "path": "/Users/ghtak/cpp/googletest/googletest/include"
@@ -577,7 +475,14 @@
                 "name": "gtest",
                 "sourceDirectory": "/Users/ghtak/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
-              },
+              }
+            ]
+          },
+          {
+            "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock",
+            "name": "gmock",
+            "sourceDirectory": "/Users/ghtak/cpp/googletest/googlemock",
+            "targets": [
               {
                 "artifacts": [
                   "/Users/ghtak/cpp/build/googletest/googlemock/libgmockd.a"
@@ -585,7 +490,7 @@
                 "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
                     "includePath": [
                       {
                         "path": "/Users/ghtak/cpp/googletest/googlemock/include"
@@ -612,6 +517,101 @@
                 "linkerLanguage": "CXX",
                 "name": "gmock",
                 "sourceDirectory": "/Users/ghtak/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/Users/ghtak/cpp/build/googletest/googlemock/libgmock_maind.a"
+                ],
+                "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
+                    "includePath": [
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc",
+                      "src/gmock_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgmock_maind.a",
+                "linkerLanguage": "CXX",
+                "name": "gmock_main",
+                "sourceDirectory": "/Users/ghtak/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/Users/ghtak/cpp/build/googletest/googlemock/gtest/libgtest_maind.a"
+                ],
+                "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
+                    "includePath": [
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgtest_maind.a",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
+                "sourceDirectory": "/Users/ghtak/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/Users/ghtak/cpp/build/googletest/googlemock/gtest/libgtestd.a"
+                ],
+                "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
+                    "includePath": [
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgtestd.a",
+                "linkerLanguage": "CXX",
+                "name": "gtest",
+                "sourceDirectory": "/Users/ghtak/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
               }
             ]
@@ -623,12 +623,48 @@
             "targets": [
               {
                 "artifacts": [
+                  "/Users/ghtak/cpp/build/googletest/googlemock/libgmockd.a"
+                ],
+                "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
+                    "includePath": [
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googlemock/include"
+                      },
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googlemock"
+                      },
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "/Users/ghtak/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "../googletest/src/gtest-all.cc",
+                      "src/gmock-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "libgmockd.a",
+                "linkerLanguage": "CXX",
+                "name": "gmock",
+                "sourceDirectory": "/Users/ghtak/cpp/googletest/googlemock",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
                   "/Users/ghtak/cpp/build/googletest/googlemock/libgmock_maind.a"
                 ],
                 "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
                     "includePath": [
                       {
                         "path": "/Users/ghtak/cpp/googletest/googlemock/include"
@@ -665,7 +701,7 @@
                 "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock/gtest",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
                     "includePath": [
                       {
                         "path": "/Users/ghtak/cpp/googletest/googletest/include"
@@ -694,7 +730,7 @@
                 "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock/gtest",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
                     "includePath": [
                       {
                         "path": "/Users/ghtak/cpp/googletest/googletest/include"
@@ -714,42 +750,6 @@
                 "linkerLanguage": "CXX",
                 "name": "gtest",
                 "sourceDirectory": "/Users/ghtak/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
-                "artifacts": [
-                  "/Users/ghtak/cpp/build/googletest/googlemock/libgmockd.a"
-                ],
-                "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
-                    "includePath": [
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googlemock/include"
-                      },
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googlemock"
-                      },
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "/Users/ghtak/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "../googletest/src/gtest-all.cc",
-                      "src/gmock-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "libgmockd.a",
-                "linkerLanguage": "CXX",
-                "name": "gmock",
-                "sourceDirectory": "/Users/ghtak/cpp/googletest/googlemock",
                 "type": "STATIC_LIBRARY"
               }
             ]
@@ -766,7 +766,7 @@
                 "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock/gtest",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
                     "includePath": [
                       {
                         "path": "/Users/ghtak/cpp/googletest/googletest/include"
@@ -795,7 +795,7 @@
                 "buildDirectory": "/Users/ghtak/cpp/build/googletest/googlemock/gtest",
                 "fileGroups": [
                   {
-                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb -Wc++11-extensions -Wunneeded-internal-declaration   -DGTEST_HAS_PTHREAD=1  ",
+                    "compileFlags": "-g   -Wall -std=c++1z -o2 -g -ggdb   -DGTEST_HAS_PTHREAD=1  ",
                     "includePath": [
                       {
                         "path": "/Users/ghtak/cpp/googletest/googletest/include"
@@ -822,7 +822,7 @@
         ]
       }
     ],
-    "cookie": "0.3658991709638195",
+    "cookie": "0.15554447397786286",
     "inReplyTo": "codemodel",
     "type": "reply"
   }
