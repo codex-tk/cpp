@@ -2,6 +2,7 @@
 #define __codex_buffer_basic_byte_buffer_h__
 
 #include <codex/buffer/block_factory.hpp>
+#include <cstring>
 
 namespace codex { namespace buffer {
 

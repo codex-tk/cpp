@@ -2,6 +2,7 @@
 #define __codex_string_h__
 
 #include <iostream>
+#include <cstring>
 
 namespace codex {
 namespace string {

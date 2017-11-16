@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include <codex/util/utility.hpp>
 #include <codex/tmp/tmp.hpp>
+#include <functional>
 namespace {
 
 template < unsigned ... > struct seq{};
