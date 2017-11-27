@@ -39,14 +39,14 @@ if ( ZLIB_FOUND )
     add_definitions( -DENABLE_LIB_Z )
 endif( ZLIB_FOUND )
 
-#[[
-set(Boost_NO_SYSTEM_PATHS TRUE) 
-if (Boost_NO_SYSTEM_PATHS)
-  set(BOOST_ROOT "/Users/ghtak/boost")
-  set(BOOST_INCLUDE_DIRS "${BOOST_ROOT}/include")
-  set(BOOST_LIBRARY_DIRS "${BOOST_ROOT}/lib")
-endif (Boost_NO_SYSTEM_PATHS)
-]]
+
+#set(Boost_NO_SYSTEM_PATHS TRUE) 
+#if (Boost_NO_SYSTEM_PATHS)
+#  set(BOOST_ROOT "/Users/ghtak/boost")
+#  set(BOOST_INCLUDE_DIRS "${BOOST_ROOT}/include")
+#  set(BOOST_LIBRARY_DIRS "${BOOST_ROOT}/lib")
+#endif (Boost_NO_SYSTEM_PATHS)
+
 find_package(Boost 1.60.0 COMPONENTS filesystem )
 if(Boost_FOUND)
 	message(STATUS  ${Boost_INCLUDE_DIRS} )	

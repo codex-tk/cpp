@@ -19,15 +19,28 @@ template < typename AllocatorT =
 >
 class block_factory {
 public:
-    typedef codex::rc_ptr<block<AllocatorT>> block_ptr_type;
-    static block_ptr_type create( const std::size_t size ){
-        AllocatorT allocator;
-        block<AllocatorT>* ptr = reinterpret_cast< block<AllocatorT>* >(
-            allocator.allocate( sizeof(block<AllocatorT>) + size ));
-        new (ptr) block<AllocatorT>( size );
-        return block_ptr_type(ptr);
+    typedef block<block_factory> block_type;
+public:
+    static block_type* create( const std::size_t size )
+    {
+        block_type* ptr = reinterpret_cast< block_type* >(
+            _allocator.allocate( sizeof(block_type) + size ));
+        new (ptr) block_type( size );
+        return ptr;
     }
+private:
+    friend class block<block_factory>;
+    static void release( block_type* ptr )
+    {
+        _allocator.deallocate( reinterpret_cast< uint8_t*>(ptr) , 
+        sizeof( block<block_factory> ) + ptr->size() );
+    }
+private:
+    static AllocatorT _allocator; 
 };
+
+template < typename AllocatorT >
+AllocatorT block_factory<AllocatorT>::_allocator;
 
 typedef block_factory<> default_block_factory_service; 
 

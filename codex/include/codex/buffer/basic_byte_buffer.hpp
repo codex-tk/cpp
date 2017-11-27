@@ -6,10 +6,10 @@
 
 namespace codex { namespace buffer {
 
-template < typename BlockFactoryService >
+template < typename BlockFactoryServiceT >
 class basic_byte_buffer {
 public:
-    typedef typename BlockFactoryService::block_ptr_type block_ptr_type;
+    typedef codex::rc_ptr<typename BlockFactoryServiceT::block_type> block_ptr_type;
 public:
     explicit basic_byte_buffer( const std::size_t size );
 
