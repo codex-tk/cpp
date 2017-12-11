@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <codex/buffer/basic_byte_buffer.hpp>
-
+/*
 class custom_block_factory {
 public:
     struct block {
@@ -30,17 +30,10 @@ public:
     static void swap( block_type& a , block_type& b ) {
         a.swap(b);
     }
-};
+};*/
 
-using byte_buffer = codex::buffer::basic_byte_buffer<custom_block_factory>;
+using byte_buffer = codex::buffer::basic_byte_buffer<codex::buffer::custom_block_service>;
 using block_service_type = byte_buffer::block_service_type;
-
-TEST( byte_buffer , custom ) {
-    for ( int i = 0  ; i < 12 ; ++i ) {
-        custom_block_factory::block* b = new custom_block_factory::block(i);
-    }
-}
-
 
 TEST( byte_buffer , ctor ) {
     
