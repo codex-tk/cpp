@@ -6,10 +6,11 @@
 
 namespace codex { namespace buffer {
 
-template < typename BlockFactoryServiceT >
+template < typename BlockServiceT >
 class basic_byte_buffer {
 public:
-    typedef codex::rc_ptr<typename BlockFactoryServiceT::block_type> block_ptr_type;
+    typedef BlockServiceT block_service_type;
+    typedef typename block_service_type::block_type block_type;
 public:
     explicit basic_byte_buffer( const std::size_t size );
 
@@ -33,7 +34,7 @@ public:
 
     void swap( basic_byte_buffer& rhs ) noexcept ;
 
-    block_ptr_type& block_ptr( void );
+    block_type& block( void );
 
     void reserve( const std::size_t size );
     
@@ -41,7 +42,7 @@ public:
     std::size_t commit( const std::size_t n );
     void* prepare( const std::size_t n );
 private:
-    block_ptr_type _block_ptr;
+    block_type _block;
     int _read_pos;
     int _write_pos;
 };

@@ -93,6 +93,7 @@ TEST( pack , X ) {
     X< b0 , b1 , b2 > x;
 }*/
 
+#ifdef __GNUG__
 namespace {
     template < typename ... Ts >
     int f ( Ts ... ts ) {
@@ -116,3 +117,5 @@ TEST( pack , pack ) {
     ASSERT_EQ( f( 2 , 3 , 4 ) , 2 + 3 + 4 );
     ASSERT_EQ( g(2,3,4) , f( h( 2 , 3 , 4 ) + 2 , h( 2 , 3 , 4 ) + 3 , h( 2 , 3 , 4 ) + 4 ) );
 }
+
+#endif

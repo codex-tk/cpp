@@ -3,7 +3,7 @@
 #include <codex/buffer/block_factory.hpp>
 
 TEST( block , create ) {
-    codex::rc_ptr< codex::buffer::default_block_factory_service::block_type > bptr(
+    codex::buffer::default_block_factory_service::block_type bptr(
         codex::buffer::default_block_factory_service::create( 32 )
     );
     ASSERT_NE( bptr.get() , nullptr );
