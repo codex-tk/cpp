@@ -6,37 +6,37 @@ project( cpp )
 #cmake -DMyOption=ON project -D...
 
 if(MSVC)
-    # vs option chage 
-	add_compile_options("/wd4819")
-    add_compile_options("/wd4127")
-    
-    # for googletest
-	foreach (flag_var
-				 CMAKE_CXX_FLAGS
-				 CMAKE_CXX_FLAGS_DEBUG
-				 CMAKE_CXX_FLAGS_RELEASE
-				 CMAKE_CXX_FLAGS_MINSIZEREL
-				 CMAKE_CXX_FLAGS_RELWITHDEBINFO)
-			string(REPLACE "/MD" "-MT" ${flag_var} "${${flag_var}}")
-			string(REPLACE "/W3" "/W4" ${flag_var} "${${flag_var}}")
-	endforeach()
+  # vs option chage 
+  add_compile_options("/wd4819")
+  add_compile_options("/wd4127")
 
-	string(REGEX REPLACE "/O2" "Od"
-			CMAKE_CXX_FLAGS_DEBUG
-			"${CMAKE_CXX_FLAGS_DEBUG}")
-			
-	add_definitions( /std:c++latest )
-	add_definitions( -DGTEST_LANG_CXX11=1 )
+  # for googletest
+  foreach (flag_var
+      CMAKE_CXX_FLAGS
+      CMAKE_CXX_FLAGS_DEBUG
+      CMAKE_CXX_FLAGS_RELEASE
+      CMAKE_CXX_FLAGS_MINSIZEREL
+      CMAKE_CXX_FLAGS_RELWITHDEBINFO)
+    string(REPLACE "/MD" "-MT" ${flag_var} "${${flag_var}}")
+    string(REPLACE "/W3" "/W4" ${flag_var} "${${flag_var}}")
+  endforeach()
+
+  string(REGEX REPLACE "/O2" "Od"
+    CMAKE_CXX_FLAGS_DEBUG
+    "${CMAKE_CXX_FLAGS_DEBUG}")
+
+  add_definitions( /std:c++latest )
+  add_definitions( -DGTEST_LANG_CXX11=1 )
 else()
-	#-std=c++1z 
-	add_definitions( -Wall -std=c++1z  -o2 -g -ggdb )
+  #-std=c++1z 
+  add_definitions( -Wall -std=c++17 -o2 -g -ggdb -fconcepts )
 endif()
 
 find_package( ZLIB )
 if ( ZLIB_FOUND )
-    include_directories( ${ZLIB_INCLUDE_DIRS} )
-    #target_link_libraries( codex.tests ${ZLIB_LIBRARIES} )
-    add_definitions( -DENABLE_LIB_Z )
+  include_directories( ${ZLIB_INCLUDE_DIRS} )
+  #target_link_libraries( codex.tests ${ZLIB_LIBRARIES} )
+  add_definitions( -DENABLE_LIB_Z )
 endif( ZLIB_FOUND )
 
 
@@ -61,4 +61,7 @@ endif()
 add_subdirectory( googletest )
 add_subdirectory( codex )
 add_subdirectory( codex/tests )
+<<<<<<< HEAD
 add_subdirectory( asio/echo )
+=======
+>>>>>>> b02660fe0ec9398afd6e93fce659808111b1e61a
