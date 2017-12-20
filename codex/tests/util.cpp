@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include <codex/util/base64.hpp>
 #include <codex/util/checksum.hpp>
+#include "helper.hpp"
 
 class conv_b64_test : public testing::Test {
 public:
@@ -99,4 +100,28 @@ TEST(conv, checksum) {
     val += chksum;
     ASSERT_EQ(val, 0);
   }
+}
+using namespace std;
+class Solution {
+public:
+    vector<int> countBits(int num) {
+        vector<int> ans(num+1,1);
+        ans[0] = 0;
+        int loop = 1;
+        int sub = 0;
+        for ( int i = 1 ; i <= num ; ++i ) {
+            if ( loop == sub ) {            
+                loop += sub;
+                sub = 1;
+            } else {
+                ans[i] = ans[sub++] + 1;
+            }
+        }
+        return ans;
+    }
+};
+
+TEST(leetcode, countBits) {
+  Solution s;
+  s.countBits(16);
 }
