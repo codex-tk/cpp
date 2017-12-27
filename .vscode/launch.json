@@ -1,6 +1,18 @@
 {
         "version": "0.2.0",
         "configurations": [
+            {
+                "name": "(lldb) echo",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${workspaceRoot}/build/asio/echo/asio.echo",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}",
+                "environment": [],
+                "externalConsole": true,
+                "MIMode": "lldb"
+            },
             { 
                 "name": "(lldb) Attach",
                 "type": "cppdbg",

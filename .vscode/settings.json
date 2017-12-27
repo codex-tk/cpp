@@ -93,6 +93,7 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "__mutex_base": "cpp",
-        "any": "cpp"
+        "any": "cpp",
+        "future": "cpp"
     }
 }

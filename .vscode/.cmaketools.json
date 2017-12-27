@@ -6,12 +6,71 @@
     },
     "description": "Emit debug information without performing optimizations"
   },
-  "activeEnvironments": [],
+  "activeEnvironments": [
+    "Visual Studio Build Tools 2017 - x86"
+  ],
   "codeModel": {
     "configurations": [
       {
         "name": "Debug",
         "projects": [
+          {
+            "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+            "name": "asio.echo",
+            "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+            "targets": [
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/asio/echo/Debug/asio.echo.exe",
+                  "C:/Users/tk/play/cpp/build/asio/echo/Debug/asio.echo.lib",
+                  "C:/Users/tk/play/cpp/build/asio/echo/Debug/asio.echo.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "main.cpp"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "asio.echo.exe",
+                "linkFlags": "/machine:X86 /debug /INCREMENTAL /subsystem:console",
+                "linkLanguageFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1",
+                "linkLibraries": "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+                "linkerLanguage": "CXX",
+                "name": "asio.echo",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "EXECUTABLE"
+              }
+            ]
+          },
           {
             "buildDirectory": "C:/Users/tk/play/cpp/build/codex",
             "name": "codex",
@@ -132,21 +191,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/tests/Debug/codex.tests.exe",
                   "C:/Users/tk/play/cpp/build/codex/tests/Debug/codex.tests.lib",
@@ -224,43 +268,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              }
-            ]
-          },
-          {
-            "buildDirectory": "C:/Users/tk/play/cpp/build",
-            "name": "cpp",
-            "sourceDirectory": "C:/Users/tk/play/cpp",
-            "targets": [
-              {
-                "buildDirectory": "C:/Users/tk/play/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/14fd0bdcef2f050c7421f27483177c3f/generate.stamp.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ZERO_CHECK",
-                "name": "ZERO_CHECK",
-                "sourceDirectory": "C:/Users/tk/play/cpp",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
               },
               {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
@@ -276,48 +283,14 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
                 "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.pdb"
-                ],
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gtestd.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
+              }
+            ]
+          },
+          {
+            "buildDirectory": "C:/Users/tk/play/cpp/build",
+            "name": "cpp",
+            "sourceDirectory": "C:/Users/tk/play/cpp",
+            "targets": [
               {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/Debug/codexd.lib",
@@ -411,62 +384,6 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.pdb"
-                ],
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gtest_maind.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/tests/Debug/codex.tests.exe",
                   "C:/Users/tk/play/cpp/build/codex/tests/Debug/codex.tests.lib",
@@ -546,6 +463,21 @@
                 "type": "EXECUTABLE"
               },
               {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "UTILITY"
+              },
+              {
                 "buildDirectory": "C:/Users/tk/play/cpp/build",
                 "fileGroups": [
                   {
@@ -561,6 +493,62 @@
                 "type": "UTILITY"
               },
               {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gtestd.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
                 "fileGroups": [
                   {
@@ -574,6 +562,127 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
                 "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gtest_maind.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/14fd0bdcef2f050c7421f27483177c3f/generate.stamp.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ZERO_CHECK",
+                "name": "ZERO_CHECK",
+                "sourceDirectory": "C:/Users/tk/play/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/asio/echo/Debug/asio.echo.exe",
+                  "C:/Users/tk/play/cpp/build/asio/echo/Debug/asio.echo.lib",
+                  "C:/Users/tk/play/cpp/build/asio/echo/Debug/asio.echo.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1   /std:c++latest /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "main.cpp"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "asio.echo.exe",
+                "linkFlags": "/machine:X86 /debug /INCREMENTAL /subsystem:console",
+                "linkLanguageFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MTd /Zi /Ob0 /Od /RTC1",
+                "linkLibraries": "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+                "linkerLanguage": "CXX",
+                "name": "asio.echo",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "EXECUTABLE"
               },
               {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/codex",
@@ -695,21 +804,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
@@ -751,21 +845,6 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtest_maind.lib",
@@ -805,6 +884,36 @@
                 "name": "gtest_main",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "type": "UTILITY"
               },
               {
                 "artifacts": [
@@ -911,21 +1020,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
@@ -967,7 +1061,7 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
                 "fileGroups": [
                   {
                     "isGenerated": false,
@@ -978,7 +1072,7 @@
                 ],
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
                 "type": "UTILITY"
               },
               {
@@ -1023,7 +1117,7 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
                 "fileGroups": [
                   {
                     "isGenerated": false,
@@ -1034,7 +1128,22 @@
                 ],
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
                 "type": "UTILITY"
               },
               {
@@ -1142,21 +1251,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Debug/gtestd.lib",
@@ -1237,6 +1331,21 @@
                 "name": "gtest_main",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
               }
             ]
           }
@@ -1246,6 +1355,63 @@
         "name": "Release",
         "projects": [
           {
+            "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+            "name": "asio.echo",
+            "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+            "targets": [
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/asio/echo/Release/asio.echo.exe",
+                  "C:/Users/tk/play/cpp/build/asio/echo/Release/asio.echo.lib",
+                  "C:/Users/tk/play/cpp/build/asio/echo/Release/asio.echo.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "main.cpp"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "asio.echo.exe",
+                "linkFlags": "/machine:X86 /INCREMENTAL:NO /subsystem:console",
+                "linkLanguageFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG",
+                "linkLibraries": "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+                "linkerLanguage": "CXX",
+                "name": "asio.echo",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "EXECUTABLE"
+              }
+            ]
+          },
+          {
             "buildDirectory": "C:/Users/tk/play/cpp/build/codex",
             "name": "codex",
             "sourceDirectory": "C:/Users/tk/play/cpp/codex",
@@ -1365,21 +1531,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/tests/Release/codex.tests.exe",
                   "C:/Users/tk/play/cpp/build/codex/tests/Release/codex.tests.lib",
@@ -1457,43 +1608,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              }
-            ]
-          },
-          {
-            "buildDirectory": "C:/Users/tk/play/cpp/build",
-            "name": "cpp",
-            "sourceDirectory": "C:/Users/tk/play/cpp",
-            "targets": [
-              {
-                "buildDirectory": "C:/Users/tk/play/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/14fd0bdcef2f050c7421f27483177c3f/generate.stamp.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ZERO_CHECK",
-                "name": "ZERO_CHECK",
-                "sourceDirectory": "C:/Users/tk/play/cpp",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
               },
               {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
@@ -1509,48 +1623,14 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
                 "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.pdb"
-                ],
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  },
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest-all.cc"
-                    ]
-                  }
-                ],
-                "fullName": "gtest.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
+              }
+            ]
+          },
+          {
+            "buildDirectory": "C:/Users/tk/play/cpp/build",
+            "name": "cpp",
+            "sourceDirectory": "C:/Users/tk/play/cpp",
+            "targets": [
               {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/Release/codex.lib",
@@ -1644,62 +1724,6 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest_main.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest_main.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  },
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  }
-                ],
-                "fullName": "gtest_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/tests/Release/codex.tests.exe",
                   "C:/Users/tk/play/cpp/build/codex/tests/Release/codex.tests.lib",
@@ -1779,6 +1803,21 @@
                 "type": "EXECUTABLE"
               },
               {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "UTILITY"
+              },
+              {
                 "buildDirectory": "C:/Users/tk/play/cpp/build",
                 "fileGroups": [
                   {
@@ -1794,6 +1833,62 @@
                 "type": "UTILITY"
               },
               {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  },
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest-all.cc"
+                    ]
+                  }
+                ],
+                "fullName": "gtest.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
                 "fileGroups": [
                   {
@@ -1807,6 +1902,127 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
                 "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest_main.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest_main.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  },
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  }
+                ],
+                "fullName": "gtest_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/14fd0bdcef2f050c7421f27483177c3f/generate.stamp.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ZERO_CHECK",
+                "name": "ZERO_CHECK",
+                "sourceDirectory": "C:/Users/tk/play/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/asio/echo/Release/asio.echo.exe",
+                  "C:/Users/tk/play/cpp/build/asio/echo/Release/asio.echo.lib",
+                  "C:/Users/tk/play/cpp/build/asio/echo/Release/asio.echo.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG   /std:c++latest /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "main.cpp"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "asio.echo.exe",
+                "linkFlags": "/machine:X86 /INCREMENTAL:NO /subsystem:console",
+                "linkLanguageFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O2 /Ob2 /DNDEBUG",
+                "linkLibraries": "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+                "linkerLanguage": "CXX",
+                "name": "asio.echo",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "EXECUTABLE"
               },
               {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/codex",
@@ -1928,21 +2144,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
@@ -1984,21 +2185,6 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest_main.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest_main.lib",
@@ -2038,6 +2224,36 @@
                 "name": "gtest_main",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "type": "UTILITY"
               },
               {
                 "artifacts": [
@@ -2144,21 +2360,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
@@ -2200,7 +2401,7 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
                 "fileGroups": [
                   {
                     "isGenerated": false,
@@ -2211,7 +2412,7 @@
                 ],
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
                 "type": "UTILITY"
               },
               {
@@ -2256,7 +2457,7 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
                 "fileGroups": [
                   {
                     "isGenerated": false,
@@ -2267,7 +2468,22 @@
                 ],
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
                 "type": "UTILITY"
               },
               {
@@ -2375,21 +2591,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/Release/gtest.lib",
@@ -2470,6 +2671,21 @@
                 "name": "gtest_main",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
               }
             ]
           }
@@ -2479,6 +2695,63 @@
         "name": "MinSizeRel",
         "projects": [
           {
+            "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+            "name": "asio.echo",
+            "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+            "targets": [
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/asio/echo/MinSizeRel/asio.echo.exe",
+                  "C:/Users/tk/play/cpp/build/asio/echo/MinSizeRel/asio.echo.lib",
+                  "C:/Users/tk/play/cpp/build/asio/echo/MinSizeRel/asio.echo.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "main.cpp"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "asio.echo.exe",
+                "linkFlags": "/machine:X86 /INCREMENTAL:NO /subsystem:console",
+                "linkLanguageFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG",
+                "linkLibraries": "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+                "linkerLanguage": "CXX",
+                "name": "asio.echo",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "EXECUTABLE"
+              }
+            ]
+          },
+          {
             "buildDirectory": "C:/Users/tk/play/cpp/build/codex",
             "name": "codex",
             "sourceDirectory": "C:/Users/tk/play/cpp/codex",
@@ -2598,21 +2871,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/tests/MinSizeRel/codex.tests.exe",
                   "C:/Users/tk/play/cpp/build/codex/tests/MinSizeRel/codex.tests.lib",
@@ -2690,43 +2948,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              }
-            ]
-          },
-          {
-            "buildDirectory": "C:/Users/tk/play/cpp/build",
-            "name": "cpp",
-            "sourceDirectory": "C:/Users/tk/play/cpp",
-            "targets": [
-              {
-                "buildDirectory": "C:/Users/tk/play/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/14fd0bdcef2f050c7421f27483177c3f/generate.stamp.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ZERO_CHECK",
-                "name": "ZERO_CHECK",
-                "sourceDirectory": "C:/Users/tk/play/cpp",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
               },
               {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
@@ -2742,48 +2963,14 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
                 "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.pdb"
-                ],
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gtest.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
+              }
+            ]
+          },
+          {
+            "buildDirectory": "C:/Users/tk/play/cpp/build",
+            "name": "cpp",
+            "sourceDirectory": "C:/Users/tk/play/cpp",
+            "targets": [
               {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/MinSizeRel/codex.lib",
@@ -2877,62 +3064,6 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gtest_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/tests/MinSizeRel/codex.tests.exe",
                   "C:/Users/tk/play/cpp/build/codex/tests/MinSizeRel/codex.tests.lib",
@@ -3012,6 +3143,21 @@
                 "type": "EXECUTABLE"
               },
               {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "UTILITY"
+              },
+              {
                 "buildDirectory": "C:/Users/tk/play/cpp/build",
                 "fileGroups": [
                   {
@@ -3027,6 +3173,62 @@
                 "type": "UTILITY"
               },
               {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gtest.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
                 "fileGroups": [
                   {
@@ -3040,6 +3242,127 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
                 "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gtest_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/14fd0bdcef2f050c7421f27483177c3f/generate.stamp.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ZERO_CHECK",
+                "name": "ZERO_CHECK",
+                "sourceDirectory": "C:/Users/tk/play/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/asio/echo/MinSizeRel/asio.echo.exe",
+                  "C:/Users/tk/play/cpp/build/asio/echo/MinSizeRel/asio.echo.lib",
+                  "C:/Users/tk/play/cpp/build/asio/echo/MinSizeRel/asio.echo.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG   /std:c++latest /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "main.cpp"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "asio.echo.exe",
+                "linkFlags": "/machine:X86 /INCREMENTAL:NO /subsystem:console",
+                "linkLanguageFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /O1 /Ob1 /DNDEBUG",
+                "linkLibraries": "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+                "linkerLanguage": "CXX",
+                "name": "asio.echo",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "EXECUTABLE"
               },
               {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/codex",
@@ -3161,21 +3484,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
@@ -3217,21 +3525,6 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest_main.lib",
@@ -3271,6 +3564,36 @@
                 "name": "gtest_main",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "type": "UTILITY"
               },
               {
                 "artifacts": [
@@ -3377,21 +3700,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
@@ -3433,7 +3741,7 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
                 "fileGroups": [
                   {
                     "isGenerated": false,
@@ -3444,7 +3752,7 @@
                 ],
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
                 "type": "UTILITY"
               },
               {
@@ -3489,7 +3797,7 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
                 "fileGroups": [
                   {
                     "isGenerated": false,
@@ -3500,7 +3808,22 @@
                 ],
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
                 "type": "UTILITY"
               },
               {
@@ -3608,21 +3931,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/MinSizeRel/gtest.lib",
@@ -3703,6 +4011,21 @@
                 "name": "gtest_main",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
               }
             ]
           }
@@ -3712,6 +4035,63 @@
         "name": "RelWithDebInfo",
         "projects": [
           {
+            "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+            "name": "asio.echo",
+            "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+            "targets": [
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/asio/echo/RelWithDebInfo/asio.echo.exe",
+                  "C:/Users/tk/play/cpp/build/asio/echo/RelWithDebInfo/asio.echo.lib",
+                  "C:/Users/tk/play/cpp/build/asio/echo/RelWithDebInfo/asio.echo.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  },
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "main.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "asio.echo.exe",
+                "linkFlags": "/machine:X86 /debug /INCREMENTAL /subsystem:console",
+                "linkLanguageFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG",
+                "linkLibraries": "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+                "linkerLanguage": "CXX",
+                "name": "asio.echo",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "EXECUTABLE"
+              }
+            ]
+          },
+          {
             "buildDirectory": "C:/Users/tk/play/cpp/build/codex",
             "name": "codex",
             "sourceDirectory": "C:/Users/tk/play/cpp/codex",
@@ -3831,21 +4211,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/tests/RelWithDebInfo/codex.tests.exe",
                   "C:/Users/tk/play/cpp/build/codex/tests/RelWithDebInfo/codex.tests.lib",
@@ -3923,43 +4288,6 @@
                 "name": "codex.tests",
                 "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
                 "type": "EXECUTABLE"
-              }
-            ]
-          },
-          {
-            "buildDirectory": "C:/Users/tk/play/cpp/build",
-            "name": "cpp",
-            "sourceDirectory": "C:/Users/tk/play/cpp",
-            "targets": [
-              {
-                "buildDirectory": "C:/Users/tk/play/cpp/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/14fd0bdcef2f050c7421f27483177c3f/generate.stamp.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ZERO_CHECK",
-                "name": "ZERO_CHECK",
-                "sourceDirectory": "C:/Users/tk/play/cpp",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
               },
               {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
@@ -3975,48 +4303,14 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
                 "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.pdb"
-                ],
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest-all.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gtest.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
+              }
+            ]
+          },
+          {
+            "buildDirectory": "C:/Users/tk/play/cpp/build",
+            "name": "cpp",
+            "sourceDirectory": "C:/Users/tk/play/cpp",
+            "targets": [
               {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/RelWithDebInfo/codex.lib",
@@ -4110,62 +4404,6 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.lib",
-                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.pdb"
-                ],
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
-                    "defines": [
-                      "GTEST_LANG_CXX11=1"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
-                      },
-                      {
-                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "src/gtest_main.cc"
-                    ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "gtest_main.lib",
-                "linkFlags": "/machine:X86",
-                "linkerLanguage": "CXX",
-                "name": "gtest_main",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "STATIC_LIBRARY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/codex/tests/RelWithDebInfo/codex.tests.exe",
                   "C:/Users/tk/play/cpp/build/codex/tests/RelWithDebInfo/codex.tests.lib",
@@ -4245,6 +4483,21 @@
                 "type": "EXECUTABLE"
               },
               {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "UTILITY"
+              },
+              {
                 "buildDirectory": "C:/Users/tk/play/cpp/build",
                 "fileGroups": [
                   {
@@ -4260,6 +4513,62 @@
                 "type": "UTILITY"
               },
               {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/codex/tests",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/codex/tests",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest-all.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gtest.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
                 "fileGroups": [
                   {
@@ -4273,6 +4582,127 @@
                 "name": "ALL_BUILD",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
                 "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.lib",
+                  "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest/include"
+                      },
+                      {
+                        "path": "C:/Users/tk/play/cpp/googletest/googletest"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/gtest_main.cc"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "gtest_main.lib",
+                "linkFlags": "/machine:X86",
+                "linkerLanguage": "CXX",
+                "name": "gtest_main",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/14fd0bdcef2f050c7421f27483177c3f/generate.stamp.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ZERO_CHECK",
+                "name": "ZERO_CHECK",
+                "sourceDirectory": "C:/Users/tk/play/cpp",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "C:/Users/tk/play/cpp/build/asio/echo/RelWithDebInfo/asio.echo.exe",
+                  "C:/Users/tk/play/cpp/build/asio/echo/RelWithDebInfo/asio.echo.lib",
+                  "C:/Users/tk/play/cpp/build/asio/echo/RelWithDebInfo/asio.echo.pdb"
+                ],
+                "buildDirectory": "C:/Users/tk/play/cpp/build/asio/echo",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  },
+                  {
+                    "compileFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG   /std:c++latest /wd4819 /wd4127",
+                    "defines": [
+                      "GTEST_LANG_CXX11=1"
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "main.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "asio.echo.exe",
+                "linkFlags": "/machine:X86 /debug /INCREMENTAL /subsystem:console",
+                "linkLanguageFlags": "/DWIN32 /D_WINDOWS /W4 /GR /EHsc -MT /Zi /O2 /Ob1 /DNDEBUG",
+                "linkLibraries": "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+                "linkerLanguage": "CXX",
+                "name": "asio.echo",
+                "sourceDirectory": "C:/Users/tk/play/cpp/asio/echo",
+                "type": "EXECUTABLE"
               },
               {
                 "buildDirectory": "C:/Users/tk/play/cpp/build/codex",
@@ -4394,21 +4824,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
@@ -4450,21 +4865,6 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest_main.lib",
@@ -4504,6 +4904,36 @@
                 "name": "gtest_main",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "type": "UTILITY"
               },
               {
                 "artifacts": [
@@ -4610,21 +5040,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
@@ -4666,7 +5081,7 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
                 "fileGroups": [
                   {
                     "isGenerated": false,
@@ -4677,7 +5092,7 @@
                 ],
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
                 "type": "UTILITY"
               },
               {
@@ -4722,7 +5137,7 @@
                 "type": "STATIC_LIBRARY"
               },
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest",
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
                 "fileGroups": [
                   {
                     "isGenerated": false,
@@ -4733,7 +5148,22 @@
                 ],
                 "fullName": "ALL_BUILD",
                 "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googlemock",
                 "type": "UTILITY"
               },
               {
@@ -4841,21 +5271,6 @@
             "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
             "targets": [
               {
-                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
-                "fileGroups": [
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "CMakeLists.txt"
-                    ]
-                  }
-                ],
-                "fullName": "ALL_BUILD",
-                "name": "ALL_BUILD",
-                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
                   "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest/RelWithDebInfo/gtest.lib",
@@ -4936,13 +5351,28 @@
                 "name": "gtest_main",
                 "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
                 "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "C:/Users/tk/play/cpp/build/googletest/googlemock/gtest",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "CMakeLists.txt"
+                    ]
+                  }
+                ],
+                "fullName": "ALL_BUILD",
+                "name": "ALL_BUILD",
+                "sourceDirectory": "C:/Users/tk/play/cpp/googletest/googletest",
+                "type": "UTILITY"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.44264876709694323",
+    "cookie": "0.3845076215604344",
     "inReplyTo": "codemodel",
     "type": "reply"
   }
