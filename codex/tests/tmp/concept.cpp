@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#ifdef __GNUG__
 template<typename T>
 concept bool Addable = requires(T a, T b) { a +  b; };
 
@@ -16,3 +17,4 @@ TEST( concept , sample0 ) {
 // compile error
 // add( Foo{} , Foo{} );
 }
+#endif
